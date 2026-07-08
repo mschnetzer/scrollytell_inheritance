@@ -1,0 +1,621 @@
+---
+title: "The Demographic Dividend and Distributional Effects of a European Inheritance Tax"
+author: 
+  - name: Hugo Cruces
+  - name: Judith Derndorfer
+    orcid: 0000-0002-8821-0541
+  - name: Klaus Grünberger
+    orcid: 0000-0002-9775-3329
+  - name: Matthias Schnetzer
+    orcid: 0000-0002-1463-1271
+doi: 10.1111/roiw.70026
+title-block-style: default
+lang: en
+bibliography: data/ip.bib
+csl: data/ip.csl
+filters:
+    - openlinksinnewpage
+format: 
+  closeread-html:
+    css: inherittax.css
+    code-tools: false
+    fig-format: svg
+    toc: false
+    page-layout: article
+    linkcolor: tomato
+---
+
+```{r packages}
+#| echo: false
+#| warning: false
+#| message: false
+library(tidyverse)
+library(readxl)
+library(countrycode)
+library(ggflags)
+library(ggrepel)
+library(eurostat)
+library(ggtext)
+library(scales)
+library(glue)
+library(gt)
+library(gtExtras)
+
+results_data <- "28May26"
+```
+
+# {.page-columns .page-full}
+
+## What is this paper all about?
+
+European countries face mounting fiscal pressures from population ageing with rising expenditure for age-related public services. At the same time, intergenerational wealth transfers are set to grow substantially as the baby-boom generation ages, yet existing inheritance tax systems collect very little revenue relative to this growing transfer volume.
+
+This paper asks what a common or harmonised inheritance tax could raise across Europe, and how the answer depends on tax design. We apply INTAXMOD — a microsimulation model combining household wealth data with demographic projections — to 13 EU member states and simulate three alternative tax scenarios from 2025 to 2050. Our results show that well-designed inheritance taxes could generate funds to cope with the rising age-related expenditure, with revenues projected to grow considerably as inheritance volumes expand, while leaving a large majority of heirs unaffected.
+
+\
+
+## Why tax inheritances?
+
+The normative case for taxing inherited wealth rests on two interrelated arguments: equity and fiscal efficiency. Because the receipt of an inheritance is largely determined by circumstances of birth rather than individual effort, intergenerational transfers are widely regarded as a source of inequality that is difficult to justify on meritocratic grounds [@piketty_rethinking_2023; @scheuer_taxation_2020]. Empirical evidence supports this view: individuals who receive substantial gifts or inheritances are, on average, wealthier than those who do not, and this holds consistently across all age and education groups [@fessler_private_2018; @palomino_wealth_2022]. In several European countries, the lifetime wealth effect of a large inheritance exceeds the premium associated with tertiary rather than primary education [@eurofound_wealth_2021].
+
+:::{ .column-margin}
+An estimated 50–60% of total private wealth in France, Germany, Sweden and the United Kingdom has been *inherited* rather than self-accumulated [@alvaredo_share_2017].
+:::
+
+On the fiscal side, 17 EU member states levy some form of inheritance tax, yet revenues remain low — on average just 0.55% of total tax revenue [@european_commission_wealth_2026]. This gap between statutory rates and effective yields reflects narrow tax bases, generous asset-class exemptions, and opportunities for legal tax minimisation [@schratzenstaller_behavioral_2025]. Our analysis quantifies the extent to which reformed inheritance tax designs could close this gap.
+
+\
+
+## Data and methodology
+
+Our simulations draw on INTAXMOD, a microsimulation model developed by the Joint Research Centre (JRC) of the European Commission in cooperation with the Austrian WIFO. The model proceeds in several steps.
+
+```{mermaid}
+%%| fig-align: center
+flowchart LR
+
+E(Top-tail correction):::adjust -.-> B
+A(HFCS 2017):::main ---> B(Adjusted wealth data):::main
+B --> C(Demographic projection):::main
+C --> D(Tax simulation):::main
+F(Asset revaluation):::adjust -.-> B
+classDef main fill:firebrick,stroke:black,color:black,font-family:'Roboto Slab',font-size:16,fill-opacity:20%
+classDef adjust fill:white,stroke:black,color:black,font-style:italic,font-family:'Roboto',font-size:14
+linkStyle default stroke:black,stroke-width:2px
+```
+
+**Household wealth data:** The underlying wealth data come from the third wave of the Household Finance and Consumption Survey (HFCS), collected around 2017 by euro area national central banks [@hfcn_household_2020]. The HFCS provides harmonised household-level information on real assets, financial assets, and liabilities across EU member states. Because surveys of this type systematically under-represent very wealthy households [@vermeulen_how_2018; @cantarella_estimating_2024], we apply a Pareto-based top-tail correction, which combines HFCS observations with entries from the European Rich List Database (ERLDB) to calibrate the upper tail of the wealth distribution [@disslbacher_top_2020].
+
+**Asset revaluation:** To bring 2017 wealth positions forward to the 2025 base year, financial assets and liabilities are scaled to match Eurostat national financial accounts, while real estate values are adjusted using country-specific house price indices. This ensures the simulated inheritance volumes reflect current asset valuations rather than those prevailing at the time of data collection.
+
+**Demographic projection:** Each individual in the sample is assigned age- and sex-specific mortality probabilities derived from Eurostat life tables. As the simulation advances year by year to 2050, deaths occur probabilistically and the resulting estates are allocated to heirs according to country-specific intestacy rules, with the number of children imputed from cohort fertility data [@zeman_cohort_2017]. Wealth grows in line with projected real GDP growth rates, held constant in relative terms across the distribution.
+
+**Tax simulation:** Given a simulated inheritance for each heir, the model applies the relevant tax schedule — either the current country-specific regime or one of three counterfactual designs — and computes tax liabilities net of stylised avoidance adjustments derived from @bach_aufkommens_2012. The full model is described in @krenek_intaxmod_2022.
+
+These projections are inherently uncertain. In particular, the model does not capture inter vivos gifts, behavioural responses to taxation, or heterogeneous asset-price dynamics across age groups. Results should be read as scenario-based estimates rather than precise forecasts.
+
+\
+
+## How do inheritance volumes evolve over time?
+
+```{r evo}
+#| echo: false
+#| warning: false
+#| message: false
+v <- read_xlsx("data/results/Inheritance Volume 2025-2050_toptail.adj.2025ShowInheritanceVolume.xlsx")
+
+v_agg <- v |>
+  summarise(weighted_sum = sum(weighted_sum), .by = year) |>
+  mutate(country = "EU-13")
+
+v_group <- v |>
+  bind_rows(v_agg) |>
+  mutate(group = case_when(
+    country %in% c("DE", "FR", "IT", "ES") ~ 1,
+    country %in% c("NL", "BE", "AT", "IE", "PT") ~ 2,
+    country %in% c("FI", "SI", "LT", "LV") ~ 3,
+    TRUE ~ 4
+  ))
+
+evo <- 
+  v_group |> ggplot(aes(x = year, y = weighted_sum, color = country)) +
+  scale_color_manual(values = MetBrewer::met.brewer("Lakota")) +
+  scale_y_continuous(labels = scales::label_number(prefix = "€", suffix = "bn", scale = 1/1e9,
+                                                   big.mark = ",")) +
+  scale_x_continuous(expand = c(0.06, 0)) +
+  labs(x = NULL, y = NULL) +
+  theme_minimal(base_size = 14, base_family = "Roboto Condensed") +
+  theme(axis.text = element_text(size = 9),
+        strip.text = element_blank(),
+        legend.position = "none",
+        panel.spacing = unit(1, "lines"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major.x = element_blank(),
+        panel.grid.major.y = element_line(linewidth = 0.2),
+        plot.margin = margin(10, 10, 10, 10))
+```
+
+:::{.cr-section layout="sidebar-left"}
+
+:::{#cr-evo-total}
+```{r evo-total}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-asp: 0.69
+evo + geom_line(data = v_group |> filter(group == 4), linewidth = 1.2) +
+    geom_label(data = v_group |> filter(group == 4, year %in% c(2025, 2050)),
+      aes(label = scales::label_number(scale = 1/1e9, accuracy = .1, big.mark = ",")(weighted_sum)),
+      size = 3.5, label.padding = unit(1, "pt")) +
+  geom_label_repel(data = v_group |> filter(group == 4, year == 2040),
+      aes(label = countrycode(country, origin = "iso2c", destination = "country.name",
+                              nomatch = "EU-13")),
+      size = 3.7, family = "Roboto Condensed", min.segment.length = unit(1, "lines"),
+      force_pull = 0.4, force = 0.7,
+      label.padding = unit(1.5, "pt"), box.padding = unit(.01, "npc"), seed = 1488)
+```
+:::
+
+:::{#cr-evo-big}
+```{r evo-big}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-asp: 0.69
+evo + geom_line(data = v_group |> filter(group == 1), linewidth = 1.2) +
+    geom_label(data = v_group |> filter(group == 1, year %in% c(2025, 2050)),
+      aes(label = scales::label_number(scale = 1/1e9, accuracy = .1, big.mark = ",")(weighted_sum)),
+      size = 3.5, label.padding = unit(1, "pt")) +
+  geom_label_repel(data = v_group |> filter(group == 1, year == 2040),
+      aes(label = countrycode(country, origin = "iso2c", destination = "country.name", nomatch = "EU-13")),
+      size = 3.7, family = "Roboto Condensed", min.segment.length = unit(1, "lines"),
+      force_pull = 0.4, force = 0.7,
+      label.padding = unit(1.5, "pt"), box.padding = unit(.01, "npc"), seed = 1488)
+```
+:::
+
+:::{#cr-evo-medium}
+```{r evo-medium}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-asp: 0.69
+evo + geom_line(data = v_group |> filter(group == 2), linewidth = 1.2) +
+    geom_label(data = v_group |> filter(group == 2, year %in% c(2025, 2050)),
+      aes(label = scales::label_number(scale = 1/1e9, accuracy = .1, big.mark = ",")(weighted_sum)),
+      size = 3.5, label.padding = unit(1, "pt")) +
+  geom_label_repel(data = v_group |>
+                     filter(group == 2,year == ifelse(country %in% c("LT","SI","IE","PT"), 2030, 2040)),
+      aes(label = countrycode(country, origin = "iso2c", destination = "country.name", nomatch = "EU-13")),
+      size = 3.7, family = "Roboto Condensed", min.segment.length = unit(1, "lines"),
+      force_pull = 0.4, force = 0.7,
+      label.padding = unit(1.5, "pt"), box.padding = unit(.01, "npc"), seed = 1488)
+```
+:::
+
+:::{#cr-evo-small}
+```{r evo-small}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-asp: 0.69
+evo + geom_line(data = v_group |> filter(group == 3), linewidth = 1.2) +
+    geom_label(data = v_group |> filter(group == 3, year %in% c(2025, 2050)),
+      aes(label = scales::label_number(scale = 1/1e9, accuracy = .1, big.mark = ",")(weighted_sum)),
+      size = 3.5, label.padding = unit(1, "pt")) +
+  geom_label_repel(data = v_group |>
+                     filter(group == 3, year == ifelse(country %in% c("LT","SI","IE","PT"), 2030, 2040)),
+      aes(label = countrycode(country, origin = "iso2c", destination = "country.name", nomatch = "EU-13")),
+      size = 3.7, family = "Roboto Condensed", min.segment.length = unit(1, "lines"),
+      force_pull = 0.4, force = 0.7,
+      label.padding = unit(1.5, "pt"), box.padding = unit(.01, "npc"), seed = 1488)
+```
+:::
+
+Aggregate inheritance volumes across the 13 countries amount to roughly `{r} label_currency(prefix = "€ ", scale = 1/1e9, suffix = " billion", accuracy = 1)(v_group |> filter(country == "EU-13", year == 2025) |> pull(weighted_sum))` in 2025. Under our baseline projections, this figure rises to approximately `{r} label_currency(prefix = "€ ", scale = 1/1e9, suffix = " billion", accuracy = 1)(v_group |> filter(country == "EU-13", year == 2050) |> pull(weighted_sum))` by 2050 — an increase of `{r} label_number(suffix = "%")(v_group |> filter(country == "EU-13", year %in% c(2025, 2050)) |> reframe(growth = (weighted_sum-lag(weighted_sum))/lag(weighted_sum)*100) |> slice(2) |> pull(growth))`. The principal driver is demographic: the baby-boom generation, which accumulated wealth over several decades of rising asset valuations, is now entering the age range of highest mortality. Rising inheritance flows in Europe are well documented in the literature [@piketty_long-run_2011; @piketty_wealth_2015; @grunberger_inheritances_2024; @advani_reforming_2023]. @cr-evo-total
+
+Among Europe's largest economies, Germany displays the highest inheritance volumes, followed by France, Italy and Spain. The growth rates are, however, more modest than in the smaller countries of our sample. It is noticable, that growth is projected to decelerate after 2040 in many countries as the baby-boom cohorts are progressively exhaustd. @cr-evo-big
+
+Growth rates vary considerably across countries. Ireland (`{r} label_number(prefix = "+", suffix = "%")(v_group |> filter(country == "IE", year %in% c(2025, 2050)) |> reframe(growth = (weighted_sum-lag(weighted_sum))/lag(weighted_sum)*100) |> slice(2) |> pull(growth))`) and Austria (`{r} label_number(prefix = "+", suffix = "%")(v_group |> filter(country == "AT", year %in% c(2025, 2050)) |> reframe(growth = (weighted_sum-lag(weighted_sum))/lag(weighted_sum)*100)  |> slice(2) |> pull(growth))`) exhibit the strongest projected increases, reflecting steep age-wealth gradients and, in the case of Ireland, relatively high assumed GDP growth rates. @cr-evo-medium
+
+Latvia and Lithuania, by contrast, show more modest trajectories, as the cohorts that currently hold most of the wealth are younger and will not reach peak mortality within the projection window. All these projections should be understood as scenario-based estimates subject to uncertainty around wealth dynamics, gifting behaviour, and cohort-level dissaving. @cr-evo-small
+
+:::
+
+\
+
+## The distribution of inheritances
+
+Not only inheritance volumes differ across countries, but also the average inheritance received by heirs. This reflects country-specific differences in wealth accumulation, asset prices, household size, the number of heirs, and purchasing power levels.
+
+:::{.cr-section layout="sidebar-left"}
+
+:::{#cr-avg}
+```{r avg}
+#| warning: false
+#| html-table-processing: none
+w.na <- read_xlsx(paste0("data/results/EU Paper Stats ", results_data, ".xlsx"),
+                  sheet = "Wealth transfers (no avoidance)", n_max = 4, col_names = T) |>
+  pivot_longer(-`...1`) |>
+  pivot_wider(names_from = `...1`, values_from = value, names_glue = "{...1} (w/o avoidance)")
+
+w.a <- read_excel(paste0("data/results/EU Paper Stats ", results_data, ".xlsx"),
+                  sheet = "Wealth transfers (avoidance)", n_max = 4, col_names = T) |>
+  pivot_longer(-`...1`) |>
+  pivot_wider(names_from = `...1`, values_from = value, names_glue = "{...1} (w/ avoidance)")
+
+w <- w.a |>
+  left_join(w.na) |>
+  mutate(Country = countrycode(sourcevar = name, origin = "iso2c",
+                               destination = "country.name.en", nomatch = "EU-13"))
+
+i <- w |>
+  select(name, Country, `Average Inheritance (w/o avoidance)`, `Average Inheritance (w/ avoidance)`) |>
+  mutate(`Average Inheritance (avoidance)` = `Average Inheritance (w/o avoidance)` - `Average Inheritance (w/ avoidance)`) |>
+  mutate(name = ifelse(name == "ALL CC", "EU", name))
+
+multitab <- 
+  i |> gt() |>
+  fmt_currency(columns = -c(name, Country), decimals = 0, currency = "euro", incl_space = TRUE) |>
+  fmt_flag(columns = name) |> 
+  row_order(`Average Inheritance (w/o avoidance)`, reverse = TRUE) |> 
+  cols_move_to_end(columns = `Average Inheritance (w/ avoidance)`) |>
+  cols_label(name = "", Country = "", `Average Inheritance (avoidance)` = "Estimated avoidance", `Average Inheritance (w/o avoidance)` = "Average Inheritance", `Average Inheritance (w/ avoidance)` = "Taxable Inheritance") |> 
+  cols_width(columns = 3:5 ~ px(120)) |> 
+  tab_options(
+  table.background.color = "white",
+  table_body.hlines.color = "transparent",
+  table.font.size = 10,
+  column_labels.font.size = "100%",
+  table.font.names = "Roboto Slab") 
+
+multitab
+```
+:::
+
+:::{#cr-def}
+```{r def}
+#| html-table-processing: none
+multitab  |> 
+  gt_highlight_cols(columns = 3, fill = "tomato1", font_weight = "normal") |> 
+  gt_highlight_cols(columns = 4, fill = "goldenrod2", font_weight = "normal")
+```
+:::
+
+:::{#cr-eu}
+```{r eu}
+#| html-table-processing: none
+multitab  |> 
+  gt_highlight_rows(rows = name == "EU", fill = "lightblue", font_weight = "normal")
+```
+:::
+
+:::{#cr-max}
+```{r max}
+#| html-table-processing: none
+multitab  |> 
+  gt_highlight_rows(rows = name %in% c("BE", "LV"), fill = "lightblue", font_weight = "normal")
+```
+:::
+
+
+@cr-avg
+
+This table shows the estimates for average inheritance in 2025 as calulated by INTAXMOD. The last column shows taxable inheritances after applying asset-class-specific avoidance rates taken from related literature [@bach_aufkommens_2012]. @cr-def
+
+In 2025, the average simulated inheritance across the 13 countries is around `{r} label_currency(prefix = "€")(i |> filter(name == "EU") |> pull(var = 3))`. Avoidance effects reduce the taxable base by approximately 20% on average. The resulting average taxable inheritance is around `{r} label_currency(prefix = "€")(i |> filter(name == "EU") |> pull(var = 4))`. @cr-eu
+
+The highest average inheritance is found in Belgium (`{r} label_currency(prefix = "€")(i |> filter(name == "BE") |> pull(var = 3))`), while the lowest is in Latvia (`{r} label_currency(prefix = "€")(i |> filter(name == "LV") |> pull(var = 3))`). @cr-max
+
+@cr-avg
+
+:::
+
+Average values aside, the distribution of inheritances across heirs is highly concentrated. This has been documented in previous studies for single countries or country groups [@morelli_influence_2025; @elinder_inheritance_2018; @boserup_role_2016]. The following figure shows the distribution of inheritances across percentiles, with the black bars indicating the average tax due under prevailing country-specific regimes. It can be seen, that roughly three quarters of heirs do not owe any inheritance tax as the received amount falls well below the respective threshold. The labels show the average after-tax inheritance at selected percentiles.
+
+:::{.cr-section layout="sidebar-left"}
+
+:::{#cr-dist}
+```{r dist}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-asp: 0.8
+d <- read_xlsx("data/results/Distribution of inheritances Baseline (consider only tax values. Inheritance values are reduced by valuation).xlsx", sheet = "ALL CC")
+
+d_long <- d |>
+  select(-`Total inheritance`) |>
+  pivot_longer(cols = -Percentile, names_to = "Component", values_to = "Value") |>
+  mutate(Component = fct_rev(Component))
+
+distbase <- 
+  d_long |> ggplot(aes(x = Percentile, y = Value, fill = Component)) +
+  geom_col() +
+  geom_text(data = d |> filter(Percentile %in% c(25, 50, 75, 90, 99)),
+            aes(x = Percentile, y = `Average inheritance`,
+                label = glue("P{Percentile}: € {scales::label_number(big.mark=',', accuracy=1e3)(`Average inheritance`)} ({scales::label_number(big.mark=',', accuracy=1e3)(`Average tax`)})")),
+    angle = 90, hjust = -0.1, vjust = -0.05, size = 3.5, inherit.aes = FALSE) +
+  geom_text(data = d |> filter(Percentile == 100),
+            aes(x = Percentile, y = `Average inheritance` + `Average tax`,
+                label = glue("Top 1%: € {scales::label_number(big.mark=',', accuracy=1e3)(`Average inheritance`)} ({scales::label_number(big.mark=',', accuracy=1e3)(`Average tax`)})")),
+            hjust = 1, nudge_x = -1, vjust = 1, size = 3.5, inherit.aes = FALSE) +
+  scale_fill_manual(name = NULL,
+                    values = c("black", "gray80"),
+                    labels = c("Inheritance tax *(in parentheses)*", "After-tax inheritance"),
+                    guide = guide_legend(keywidth = 0.6, keyheight = 0.6, reverse = T,
+                                        label.theme = element_markdown())) +
+  scale_x_continuous(limits = c(0, 102), breaks = seq(0, 100, by = 10), expand = c(0.02, 0)) +
+  scale_y_continuous(breaks = function(z) seq(0, max(z), by = 1e6),
+    labels = scales::label_number(prefix = "€ ", suffix = "m", scale = 1/1e6)) +
+  labs(x = "Percentile", y = NULL) +
+  theme_minimal(base_size = 16, base_family = "Roboto Condensed") +
+  theme(axis.title = element_text(size = 11),
+        axis.text = element_text(size = 10),
+        panel.grid.major.y = element_line(linewidth = 0.2),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom",
+        legend.key.spacing.x = unit(0.7, unit = "cm"),
+        plot.margin = margin(10, 10, 10, 10))
+
+distbase
+```
+:::
+
+:::{#cr-dist-med}
+```{r dist-med}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-asp: 0.8
+
+distbase +
+  annotate("segment", x = 49.5, xend = 49.5, y = 1.5e6, yend = 9e5, linewidth = 1, arrow = arrow(length = unit(0.1, "cm"), type = "closed"), color = "tomato") +
+  gghighlight::gghighlight(Percentile == 50, use_direct_label = FALSE, unhighlighted_params = list(alpha = 0.3))
+```
+:::
+
+:::{#cr-dist-99}
+```{r dist-99}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-asp: 0.8
+
+distbase +
+  annotate("segment", x = 102, xend = 102, y = 2.96e6, yend = 6e5, linewidth = 1, arrow = arrow(length = unit(0.1, "cm"), type = "closed", ends = "both"), color = "tomato") +
+  gghighlight::gghighlight(Percentile %in% c(99, 100), use_direct_label = FALSE, unhighlighted_params = list(alpha = 0.3))
+```
+:::
+
+
+@cr-dist
+
+The median inheritance across all 13 countries is around `{r} label_currency(prefix = "€", accuracy = 1000)(d_long |> filter(Percentile == 50, Component == "Average inheritance") |> pull(Value))` — substantially below the mean of `{r} label_currency(prefix = "€", accuracy = 1000)(i |> filter(name == "EU") |> pull(var = 4))` — indicating considerable right-skewness in the distribution. The bottom half of distribution does not receive substantial wealth transfers. @cr-dist-med
+
+Concentration is most pronounced at the top. Heirs at the 99th percentile receive on average around `{r} label_currency(prefix = "€", accuracy = 1000)(d_long |> filter(Percentile == 99) |> summarise(Value = sum(Value)) |> pull(Value))`, while those in the top percentile inherit an average of `{r} label_currency(prefix = "€", accuracy = 1000)(d_long |> filter(Percentile == 100) |> summarise(Value = sum(Value)) |> pull(Value))`. This fivefold gap between the 99th percentile and the top 1% implies that a large share of the aggregate tax base is concentrated among a small number of heirs. Even at the top percentile, the average effective tax rate amounts to approximately 14%. @cr-dist-99
+
+@cr-dist
+
+:::
+
+\
+
+## Which tax scenarios are simulated?
+
+We simulate three tax designs that differ in their coverage, rate structure, and policy rationale.
+
+The **French scenario** applies France's rate structure — which generates the highest inheritance tax revenues as a share of GDP among EU member states — to all 13 countries, adjusting monetary thresholds proportionally to national median net wealth. Around 1 in 6 heirs would face a tax liability, with a cross-country average of €281,000.
+
+:::{ .column-margin}
+The tax exempt threshold for direct descendants amounts to € 100,000 in France, which equals roughly 80% of median net wealth. The tax rates range between 5 and 45%.
+:::
+
+The **main residence scenario** sets the exemption threshold at the national mean value of main residences, ensuring that typical housing inheritances remain untaxed while subjecting larger estates to progressive rates [@oecd_inheritance_2021]. The narrower coverage results in fewer affected heirs (~5%) but a higher average liability (~€1 million).
+
+The **Top 1% scenario** implements an inheritance tax rate of 50% proposed by Piketty and Saez [@piketty_theory_2013], applied above a threshold calibrated to the 99th percentile of each country's inheritance distribution. By construction, 99% of heirs are unaffected.
+
+\
+
+| Scenario | Affected heirs | Design |
+|:---|:---|:---|
+| **French** | ~18% | France's progressive schedule, with thresholds rescaled to each country's median wealth |
+| **Main residence** | ~5% | Tax-free threshold set at the national mean home value; two-bracket rate structure above |
+| **Top 1%** | ~1% | Flat 50% marginal rate applied exclusively to the top percentile of inheritances |
+
+\
+
+## How much revenue could a European inheritance tax raise?
+
+We estimate inheritance tax revenues across all 13 countries for the three scenarios in 2025. Applying the French schedule yields the highest aggregate revenue with € 71 billion (0.47% of GDP), followed closely by the Top 1% scenario with € 74 billion (0.48% of GDP). The scenario exempting main residences generates the lowest revenue with € 47 billion (0.31% of GDP), reflecting its narrower coverage.
+
+While well below major revenue sources, these figures are non-trivial relative to existing inheritance tax yields, and are projected to increase considerably over the coming decades.
+
+
+:::{.cr-section layout="sidebar-left"}
+
+:::{#cr-revenue}
+```{r revenue}
+#| echo: false
+#| warning: false
+#| message: false
+scenarios <- c(French = "FR adjusted (avoidance)",
+               `Main residence` = "Housing friendly (avoidance)",
+               `Top 1%` = "Piketty (avoidance)")
+
+gdp_countries <- read_xlsx(
+  paste0("data/results/EU Paper Stats ", results_data, ".xlsx"),
+  sheet = scenarios[[1]], n_max = 5, col_names = TRUE
+) |> names() |> setdiff(c("...1", "ALL CC"))
+
+gdp <- eurostat::get_eurostat("tec00001", filters = list(time = "2025", unit = "CP_MEUR",geo = gdp_countries))
+
+df <- scenarios |>
+  imap(\(sheet, model)
+    read_xlsx(paste0("data/results/EU Paper Stats ", results_data, ".xlsx"),
+              sheet = sheet, n_max = 5, col_names = TRUE) |>
+      pivot_longer(cols = -`...1`, names_to = "Country", values_to = "Values") |>
+      mutate(Model = model)
+  ) |>
+  list_rbind() |>
+  rename(Variable = `...1`) |>
+  left_join(gdp |> select(Country = geo, GDP25 = values)) |>
+  mutate(
+    GDP25   = ifelse(Country == "ALL CC", sum(gdp$values) * 1e6, GDP25 * 1e6),
+    Country = countrycode(Country, "iso2c", "country.name.en", nomatch = "EU-13"),
+    Country = fct_relevel(Country, "EU-13", after = 0)
+  )
+
+tr <- df |> 
+  filter(Variable == "Total Inheritance Tax Revenue") |> 
+  mutate(Share = Values/GDP25*100,
+         order = ifelse(Model == "French", Share, NA),
+         Country = fct_relevel(fct_reorder(Country, order, .desc = T), "EU-13"))
+
+gdp_growth <- read.csv("data/results/avg_gdp_growth_2025-2050.csv") |>
+  mutate(country = countrycode(country, "iso2c", "country.name.en"))
+
+tp <- read_xlsx("data/results/Tax revenues 2050 by scenario.xlsx") |>
+  pivot_longer(cols = -`Tax revenue 2050`, names_to = "Country", values_to = "Values50") |>
+  rename(Model = `Tax revenue 2050`) |>
+  mutate(Country = countrycode(Country, "iso2c", "country.name.en", nomatch = "EU-13"),
+         Model = recode_values(Model,
+           "Piketty"          ~ "Top 1%",
+           "Housing friendly" ~ "Main residence",
+           "FR_adjusted"      ~ "French",
+           default = Model))
+
+trf <- tr |>
+  select(Country, Values25 = Values, Model, GDP25) |>
+  left_join(tp) |>
+  left_join(gdp_growth, by = c("Country" = "country")) |>
+  mutate(GDP50 = ifelse(Country == "EU-13", NA, GDP25 * (1 + avg_gdpgrowth)^25),
+         GDP50 = ifelse(Country == "EU-13", sum(GDP50, na.rm = TRUE) / 3, GDP50),
+         Share25 = Values25 / GDP25 * 100,
+         Share50 = Values50 / GDP50 * 100,
+         order = ifelse(Model == "French", Share25, NA),
+         Country = fct_relevel(fct_reorder(Country, order), "EU-13"))
+
+revfig <- 
+  trf |>
+  select(Country, Model, Share25, Share50) |>
+  pivot_longer(cols = c(Share25, Share50), names_to = "Year", values_to = "Share") |>
+  ggplot(aes(y = Country, x = Share, colour = Year, group = Country)) +
+  facet_wrap(~Model, nrow = 1, scales = "free_x") +
+  scale_color_manual(values = c("lightblue", "goldenrod")) +
+  scale_y_discrete(limits = rev) +
+  scale_x_continuous(limits = c(0, NA), labels = scales::label_percent(scale = 1),
+                     breaks = seq(0, 1.6, 0.3)) +
+  labs(x = NULL, y = NULL) +
+  theme_minimal(base_size = 16, base_family = "Roboto Condensed") +
+  theme(axis.text.y = element_text(size = 11),
+        axis.text.x = element_text(size = 9),
+        panel.spacing.x = unit(2, "lines"),
+        panel.grid.major.x = element_line(linewidth = 0.2),
+        panel.grid.major.y = element_blank(),
+        panel.grid.minor = element_blank(),
+        legend.position = "none",
+        plot.margin = margin(10, 10, 10, 10))
+
+revfig +
+  geom_line(linewidth = 3.5, color = "gray90") +
+  geom_point(size = 3) +
+  geom_label(data = trf |> slice_min(order_by = Country, n = 1, by = Model),
+             aes(y = Country, x = Share25), label = "2025", size = 3,
+             label.r = unit(3, "pt"), label.padding = unit(3, "pt"),
+             hjust = 1.4, fill = "lightblue", color = "white", inherit.aes = FALSE) +
+  geom_label(data = trf |> slice_min(order_by = Country, n = 1, by = Model),
+             aes(y = Country, x = Share50), label = "2050", size = 3,
+             label.r = unit(3, "pt"), label.padding = unit(3, "pt"),
+             hjust = -0.4, fill = "goldenrod", color = "white", inherit.aes = FALSE)
+```
+:::
+
+:::{#cr-revaut}
+```{r revaut}
+#| echo: false
+#| warning: false
+#| message: false
+revfig + 
+    geom_line(linewidth = 3.5, color = "gray90") +
+    geom_point(size = 3) +
+    gghighlight::gghighlight(Country == "Austria", use_direct_label = FALSE, unhighlighted_params = list(color = "gray90", alpha = 0.5), calculate_per_facet = T) 
+```
+:::
+
+:::{#cr-revlit}
+```{r revlit}
+#| echo: false
+#| warning: false
+#| message: false
+revfig + 
+    geom_line(linewidth = 3.5, color = "gray90") +
+    geom_point(size = 3) +
+    gghighlight::gghighlight(Country %in% c("Latvia", "Lithuania"), use_direct_label = FALSE, unhighlighted_params = list(color = "gray90", alpha = 0.5), calculate_per_facet = T) 
+```
+:::
+
+@cr-revenue
+
+By 2050, simulated revenues as a share of GDP increase by 45–65% relative to the 2025 baseline across all three scenarios — a rate of growth that exceeds projected GDP growth in most countries, implying a rising revenue-to-GDP ratio even under unchanged policy. @cr-revenue
+
+Austria exhibits the strongest growth across all scenarios, consistent with its steep age-wealth gradient. @cr-revaut
+
+Latvia and Lithuania record more modest revenue growth, in line with their flatter inheritance trajectories. @cr-revlit
+
+Several countries — Finland, Belgium, France — are projected to see revenues plateau or decline after 2040 as the largest baby-boom cohorts are progressively exhausted. This pattern underscores that the growth in inheritance volumes has a transitory demographic component and is not a permanent structural shift. @cr-revenue
+
+:::
+
+\
+
+## What are the distributional effects of inheritance taxation?
+
+Beyond revenue, inheritance taxes can affect the distribution of wealth. We assess this by computing Gini coefficients and top-wealth shares before and after each tax scenario.
+
+Under current country-specific regimes, the aggregate Gini falls by less than one point relative to the pre-tax benchmark, confirming that existing systems exert limited redistributive impact despite their structural complexity.
+
+The three counterfactual scenarios produce more substantial, though still moderate, reductions. The Top 1% scenario achieves the largest redistributive effect: the aggregate EU-13 Gini falls from 74.0 to 71.5, and the top 1% wealth share declines by 6.5 percentage points. This outcome follows from the scenario's design — concentrating the tax on the transfers that empirical evidence identifies as most inequality-amplifying [@morelli_influence_2025; @elinder_inheritance_2018].
+
+:::{ .column-margin}
+Even under the most redistributive scenario, the top 1% retains more than a quarter of aggregate wealth.
+:::
+
+The French and main residence scenarios produce broadly comparable aggregate Gini reductions, though through different incidence patterns: the French scenario affects a wider share of heirs across the upper-middle of the distribution, while the main residence scenario leaves most households untouched while applying higher rates to the very largest estates.
+
+\
+
+## Policy implications
+
+Several findings have direct relevance for policy design.
+
+The high concentration of inheritances — where the top percentile receives nearly 150 times the median — implies that substantial revenue and redistribution can be achieved while leaving the large majority of heirs unaffected. Current systems underperform relative to this potential, with effective tax rates at the top percentile averaging only around 14% across the sample; narrow bases, generous exemptions, and tax planning account for much of the gap.
+
+The projected growth in inheritance volumes strengthens the fiscal case for reform. Under all three scenarios, inheritance tax revenues grow faster than GDP between 2025 and 2050, implying that well-designed taxes would become an increasingly significant revenue source without requiring rate increases. The timing is relevant: as the wealthiest baby-boom cohorts age, the effective tax base is at or near its historical peak.
+
+Tax design matters as much as the headline rate. A 50% marginal rate applied to the top 1% generates revenues comparable to the French scenario, which taxes 18 times more heirs. The appropriate choice between broad-based and targeted designs will depend on administrative capacity, political economy constraints, and distributional objectives.
+
+Finally, the cross-border dimension warrants attention. The current patchwork of national regimes — with wide variation in thresholds, rates, and asset treatment — creates scope for avoidance through cross-border planning [@schratzenstaller_behavioral_2025; @piketty_rethinking_2023]. Greater coordination across EU member states would reduce such opportunities and could limit downward competitive pressure on effective rates.
+
+\
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+#### References
+
+::: {#refs style="font-size:0.8rem;"}
+:::
+
+:::
+
+\
+
+# {#info} 
+This document was created with [Quarto](https://quarto.org), [closeread](https://closeread.netlify.app) and [R](https://www.r-project.org). 
+
+\
+
+The webpage is based on an article written by Hugo Cruces, Judith Derndorfer, Klaus Grünberger and Matthias Schnetzer that has been published in [XXX](https://doi.org/xxx).
+
+\
+
+{{< fa envelope >}} [matthias.schnetzer@akwien.at](mailto:matthias.schnetzer (at) akwien.at) &emsp; {{< fa globe >}} [mschnetzer.github.io](https://mschnetzer.github.io/) &emsp; {{< fa brands bluesky >}} [matschnetzer](https://bsky.app/profile/matschnetzer.bsky.social)
