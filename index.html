@@ -1,0 +1,3190 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Hugo Cruces">
+<meta name="author" content="Judith Derndorfer">
+<meta name="author" content="Klaus Grünberger">
+<meta name="author" content="Matthias Schnetzer">
+
+<title>The Demographic Dividend and Distributional Effects of a European Inheritance Tax</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="index_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap-8365f2aaab246fb0903118b0b7808f64.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="index_files/libs/quarto-contrib/intersection-observer-polyfill-1.0.0/intersection-observer.js"></script>
+<script src="index_files/libs/quarto-contrib/scrollama-3.2.0/scrollama.min.js"></script>
+<script src="index_files/libs/quarto-contrib/closeread-0.1.0/closeread.js"></script>
+<link href="index_files/libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="index_files/libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script src="index_files/libs/quarto-diagram/mermaid.min.js"></script>
+<script src="index_files/libs/quarto-diagram/mermaid-init.js"></script>
+<link href="index_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<meta cr-debug-mode="false">
+<meta cr-remove-header-space="false">
+
+
+<link rel="stylesheet" href="_extensions/qmd-lab/closeread/closeread.css">
+<link rel="stylesheet" href="inherittax.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The Demographic Dividend and Distributional Effects of a European Inheritance Tax</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Hugo Cruces </p>
+             <p>Judith Derndorfer <a href="https://orcid.org/0000-0002-8821-0541" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+             <p>Klaus Grünberger <a href="https://orcid.org/0000-0002-9775-3329" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+             <p>Matthias Schnetzer <a href="https://orcid.org/0000-0002-1463-1271" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+          </div>
+  </div>
+    
+  
+    
+    <div>
+    <div class="quarto-title-meta-heading">Doi</div>
+    <div class="quarto-title-meta-contents">
+      <p class="doi">
+        <a href="https://doi.org/10.1111/roiw.70026">10.1111/roiw.70026</a>
+      </p>
+    </div>
+  </div>
+  </div>
+  
+
+
+</header>
+
+
+<section id="section" class="level1 page-columns page-full">
+<h1 class="page-columns page-full"></h1>
+<section id="what-is-this-paper-all-about" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-this-paper-all-about">What is this paper all about?</h2>
+<p>European countries face mounting fiscal pressures from population ageing with rising expenditure for age-related public services. At the same time, intergenerational wealth transfers are set to grow substantially as the baby-boom generation ages, yet existing inheritance tax systems collect very little revenue relative to this growing transfer volume.</p>
+<p>This paper asks what a common or harmonised inheritance tax could raise across Europe, and how the answer depends on tax design. We apply INTAXMOD — a microsimulation model combining household wealth data with demographic projections — to 13 EU member states and simulate three alternative tax scenarios from 2025 to 2050. Our results show that well-designed inheritance taxes could generate funds to cope with the rising age-related expenditure, with revenues projected to grow considerably as inheritance volumes expand, while leaving a large majority of heirs unaffected.</p>
+<p><br>
+</p>
+</section>
+<section id="why-tax-inheritances" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="why-tax-inheritances">Why tax inheritances?</h2>
+<p>The normative case for taxing inherited wealth rests on two interrelated arguments: equity and fiscal efficiency. Because the receipt of an inheritance is largely determined by circumstances of birth rather than individual effort, intergenerational transfers are widely regarded as a source of inequality that is difficult to justify on meritocratic grounds <span class="citation" data-cites="piketty_rethinking_2023 scheuer_taxation_2020">[<a href="#ref-piketty_rethinking_2023" role="doc-biblioref">19</a>,<a href="#ref-scheuer_taxation_2020" role="doc-biblioref">21</a>]</span>. Empirical evidence supports this view: individuals who receive substantial gifts or inheritances are, on average, wealthier than those who do not, and this holds consistently across all age and education groups <span class="citation" data-cites="fessler_private_2018 palomino_wealth_2022">[<a href="#ref-fessler_private_2018" role="doc-biblioref">10</a>,<a href="#ref-palomino_wealth_2022" role="doc-biblioref">16</a>]</span>. In several European countries, the lifetime wealth effect of a large inheritance exceeds the premium associated with tertiary rather than primary education <span class="citation" data-cites="eurofound_wealth_2021">[<a href="#ref-eurofound_wealth_2021" role="doc-biblioref">8</a>]</span>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>An estimated 50–60% of total private wealth in France, Germany, Sweden and the United Kingdom has been <em>inherited</em> rather than self-accumulated <span class="citation" data-cites="alvaredo_share_2017">[<a href="#ref-alvaredo_share_2017" role="doc-biblioref">2</a>]</span>.</p>
+</div></div><p>On the fiscal side, 17 EU member states levy some form of inheritance tax, yet revenues remain low — on average just 0.55% of total tax revenue <span class="citation" data-cites="european_commission_wealth_2026">[<a href="#ref-european_commission_wealth_2026" role="doc-biblioref">9</a>]</span>. This gap between statutory rates and effective yields reflects narrow tax bases, generous asset-class exemptions, and opportunities for legal tax minimisation <span class="citation" data-cites="schratzenstaller_behavioral_2025">[<a href="#ref-schratzenstaller_behavioral_2025" role="doc-biblioref">22</a>]</span>. Our analysis quantifies the extent to which reformed inheritance tax designs could close this gap.</p>
+<p><br>
+</p>
+</section>
+<section id="data-and-methodology" class="level2">
+<h2 class="anchored" data-anchor-id="data-and-methodology">Data and methodology</h2>
+<p>Our simulations draw on INTAXMOD, a microsimulation model developed by the Joint Research Centre (JRC) of the European Commission in cooperation with the Austrian WIFO. The model proceeds in several steps.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+
+E(Top-tail correction):::adjust -.-&gt; B
+A(HFCS 2017):::main ---&gt; B(Adjusted wealth data):::main
+B --&gt; C(Demographic projection):::main
+C --&gt; D(Tax simulation):::main
+F(Asset revaluation):::adjust -.-&gt; B
+classDef main fill:firebrick,stroke:black,color:black,font-family:'Roboto Slab',font-size:16,fill-opacity:20%
+classDef adjust fill:white,stroke:black,color:black,font-style:italic,font-family:'Roboto',font-size:14
+linkStyle default stroke:black,stroke-width:2px
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>Household wealth data:</strong> The underlying wealth data come from the third wave of the Household Finance and Consumption Survey (HFCS), collected around 2017 by euro area national central banks <span class="citation" data-cites="hfcn_household_2020">[<a href="#ref-hfcn_household_2020" role="doc-biblioref">12</a>]</span>. The HFCS provides harmonised household-level information on real assets, financial assets, and liabilities across EU member states. Because surveys of this type systematically under-represent very wealthy households <span class="citation" data-cites="vermeulen_how_2018 cantarella_estimating_2024">[<a href="#ref-cantarella_estimating_2024" role="doc-biblioref">5</a>,<a href="#ref-vermeulen_how_2018" role="doc-biblioref">23</a>]</span>, we apply a Pareto-based top-tail correction, which combines HFCS observations with entries from the European Rich List Database (ERLDB) to calibrate the upper tail of the wealth distribution <span class="citation" data-cites="disslbacher_top_2020">[<a href="#ref-disslbacher_top_2020" role="doc-biblioref">6</a>]</span>.</p>
+<p><strong>Asset revaluation:</strong> To bring 2017 wealth positions forward to the 2025 base year, financial assets and liabilities are scaled to match Eurostat national financial accounts, while real estate values are adjusted using country-specific house price indices. This ensures the simulated inheritance volumes reflect current asset valuations rather than those prevailing at the time of data collection.</p>
+<p><strong>Demographic projection:</strong> Each individual in the sample is assigned age- and sex-specific mortality probabilities derived from Eurostat life tables. As the simulation advances year by year to 2050, deaths occur probabilistically and the resulting estates are allocated to heirs according to country-specific intestacy rules, with the number of children imputed from cohort fertility data <span class="citation" data-cites="zeman_cohort_2017">[<a href="#ref-zeman_cohort_2017" role="doc-biblioref">24</a>]</span>. Wealth grows in line with projected real GDP growth rates, held constant in relative terms across the distribution.</p>
+<p><strong>Tax simulation:</strong> Given a simulated inheritance for each heir, the model applies the relevant tax schedule — either the current country-specific regime or one of three counterfactual designs — and computes tax liabilities net of stylised avoidance adjustments derived from <span class="citation" data-cites="bach_aufkommens_2012">[<a href="#ref-bach_aufkommens_2012" role="doc-biblioref">3</a>]</span>. The full model is described in <span class="citation" data-cites="krenek_intaxmod_2022">[<a href="#ref-krenek_intaxmod_2022" role="doc-biblioref">13</a>]</span>.</p>
+<p>These projections are inherently uncertain. In particular, the model does not capture inter vivos gifts, behavioural responses to taxation, or heterogeneous asset-price dynamics across age groups. Results should be read as scenario-based estimates rather than precise forecasts.</p>
+<p><br>
+</p>
+</section>
+<section id="how-do-inheritance-volumes-evolve-over-time" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-inheritance-volumes-evolve-over-time">How do inheritance volumes evolve over time?</h2>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-evo-total">
+<div class="narrative">
+<p>Aggregate inheritance volumes across the 13 countries amount to roughly € 770 billion in 2025. Under our baseline projections, this figure rises to approximately € 1,591 billion by 2050 — an increase of 106%. The principal driver is demographic: the baby-boom generation, which accumulated wealth over several decades of rising asset valuations, is now entering the age range of highest mortality. Rising inheritance flows in Europe are well documented in the literature <span class="citation" data-cites="piketty_long-run_2011 piketty_wealth_2015 grunberger_inheritances_2024 advani_reforming_2023">[<a href="#ref-advani_reforming_2023" role="doc-biblioref">1</a>,<a href="#ref-grunberger_inheritances_2024" role="doc-biblioref">11</a>,<a href="#ref-piketty_long-run_2011" role="doc-biblioref">17</a>,<a href="#ref-piketty_wealth_2015" role="doc-biblioref">20</a>]</span>.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-evo-big">
+<div class="narrative">
+<p>Among Europe’s largest economies, Germany displays the highest inheritance volumes, followed by France, Italy and Spain. The growth rates are, however, more modest than in the smaller countries of our sample. It is noticable, that growth is projected to decelerate after 2040 in many countries as the baby-boom cohorts are progressively exhaustd.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-evo-medium">
+<div class="narrative">
+<p>Growth rates vary considerably across countries. Ireland (+178%) and Austria (+159%) exhibit the strongest projected increases, reflecting steep age-wealth gradients and, in the case of Ireland, relatively high assumed GDP growth rates.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-evo-small">
+<div class="narrative">
+<p>Latvia and Lithuania, by contrast, show more modest trajectories, as the cohorts that currently hold most of the wealth are younger and will not reach peak mortality within the projection window. All these projections should be understood as scenario-based estimates subject to uncertainty around wealth dynamics, gifting behaviour, and cohort-level dissaving.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-evo-total" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/evo-total-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-evo-big" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/evo-big-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-evo-medium" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/evo-medium-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-evo-small" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/evo-small-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br>
+</p>
+</section>
+<section id="the-distribution-of-inheritances" class="level2">
+<h2 class="anchored" data-anchor-id="the-distribution-of-inheritances">The distribution of inheritances</h2>
+<p>Not only inheritance volumes differ across countries, but also the average inheritance received by heirs. This reflects country-specific differences in wealth accumulation, asset prices, household size, the number of heirs, and purchasing power levels.</p>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-avg">
+<div class="narrative">
+
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-def">
+<div class="narrative">
+<p>This table shows the estimates for average inheritance in 2025 as calulated by INTAXMOD. The last column shows taxable inheritances after applying asset-class-specific avoidance rates taken from related literature <span class="citation" data-cites="bach_aufkommens_2012">[<a href="#ref-bach_aufkommens_2012" role="doc-biblioref">3</a>]</span>.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-eu">
+<div class="narrative">
+<p>In 2025, the average simulated inheritance across the 13 countries is around €124,300. Avoidance effects reduce the taxable base by approximately 20% on average. The resulting average taxable inheritance is around €98,900.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-max">
+<div class="narrative">
+<p>The highest average inheritance is found in Belgium (€267,400), while the lowest is in Latvia (€24,400).</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-avg">
+<div class="narrative">
+
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-avg" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div id="btaftwzhsz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#btaftwzhsz table {
+  font-family: 'Roboto Slab';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#btaftwzhsz thead, #btaftwzhsz tbody, #btaftwzhsz tfoot, #btaftwzhsz tr, #btaftwzhsz td, #btaftwzhsz th {
+  border-style: none;
+}
+
+#btaftwzhsz p {
+  margin: 0;
+  padding: 0;
+}
+
+#btaftwzhsz .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#btaftwzhsz .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#btaftwzhsz .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#btaftwzhsz .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#btaftwzhsz .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#btaftwzhsz .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#btaftwzhsz .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#btaftwzhsz .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#btaftwzhsz .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#btaftwzhsz .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#btaftwzhsz .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#btaftwzhsz .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#btaftwzhsz .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#btaftwzhsz .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#btaftwzhsz .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#btaftwzhsz .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#btaftwzhsz .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#btaftwzhsz .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#btaftwzhsz .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#btaftwzhsz .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#btaftwzhsz .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#btaftwzhsz .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#btaftwzhsz .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#btaftwzhsz .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#btaftwzhsz .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#btaftwzhsz .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#btaftwzhsz .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#btaftwzhsz .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#btaftwzhsz .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#btaftwzhsz .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#btaftwzhsz .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#btaftwzhsz .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#btaftwzhsz .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#btaftwzhsz .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#btaftwzhsz .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#btaftwzhsz .gt_left {
+  text-align: left;
+}
+
+#btaftwzhsz .gt_center {
+  text-align: center;
+}
+
+#btaftwzhsz .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#btaftwzhsz .gt_font_normal {
+  font-weight: normal;
+}
+
+#btaftwzhsz .gt_font_bold {
+  font-weight: bold;
+}
+
+#btaftwzhsz .gt_font_italic {
+  font-style: italic;
+}
+
+#btaftwzhsz .gt_super {
+  font-size: 65%;
+}
+
+#btaftwzhsz .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#btaftwzhsz .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#btaftwzhsz .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#btaftwzhsz .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#btaftwzhsz .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#btaftwzhsz .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#btaftwzhsz .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#btaftwzhsz .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#btaftwzhsz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" style="table-layout:fixed;" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <colgroup>
+    <col>
+    <col>
+    <col style="width:120px;">
+    <col style="width:120px;">
+    <col style="width:120px;">
+  </colgroup>
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="name"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Country"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Average-Inheritance-(w/o-avoidance)">Average Inheritance</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Average-Inheritance-(avoidance)">Estimated avoidance</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Average-Inheritance-(w/-avoidance)">Taxable Inheritance</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Belgium</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#333" d="M0 0h167l38.2 252.6L167 512H0z"></path><path fill="#d80027" d="M345 0h167v512H345l-36.7-256z"></path><path fill="#ffda44" d="M167 0h178v512H167z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Belgium</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 267,400</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 55,200</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 212,200</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Ireland</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M167 0h178l25.9 252.3L345 512H167l-29.8-253.4z"></path><path fill="#6da544" d="M0 0h167v512H0z"></path><path fill="#ff9811" d="M345 0h167v512H345z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Ireland</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 160,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 31,800</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 129,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Spain</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#ffda44" d="m0 128 256-32 256 32v256l-256 32L0 384Z"></path><path fill="#d80027" d="M0 0h512v128H0zm0 384h512v128H0z"></path><g fill="#eee"><path d="M144 304h-16v-80h16zm128 0h16v-80h-16z"></path><ellipse cx="208" cy="296" rx="48" ry="32"></ellipse></g><g fill="#d80027"><rect width="16" height="24" x="128" y="192" rx="8"></rect><rect width="16" height="24" x="272" y="192" rx="8"></rect><path d="M208 272v24a24 24 0 0 0 24 24 24 24 0 0 0 24-24v-24h-24z"></path></g><rect width="32" height="16" x="120" y="208" fill="#ff9811" ry="8"></rect><rect width="32" height="16" x="264" y="208" fill="#ff9811" ry="8"></rect><rect width="32" height="16" x="120" y="304" fill="#ff9811" rx="8"></rect><rect width="32" height="16" x="264" y="304" fill="#ff9811" rx="8"></rect><path fill="#ff9811" d="M160 272v24c0 8 4 14 9 19l5-6 5 10a21 21 0 0 0 10 0l5-10 5 6c6-5 9-11 9-19v-24h-9l-5 8-5-8h-10l-5 8-5-8z"></path><path d="M122 252h172m-172 24h28m116 0h28"></path><path fill="#d80027" d="M122 248a4 4 0 0 0-4 4 4 4 0 0 0 4 4h172a4 4 0 0 0 4-4 4 4 0 0 0-4-4zm0 24a4 4 0 0 0-4 4 4 4 0 0 0 4 4h28a4 4 0 0 0 4-4 4 4 0 0 0-4-4zm144 0a4 4 0 0 0-4 4 4 4 0 0 0 4 4h28a4 4 0 0 0 4-4 4 4 0 0 0-4-4z"></path><path fill="#eee" d="M196 168c-7 0-13 5-15 11l-5-1c-9 0-16 7-16 16s7 16 16 16c7 0 13-4 15-11a16 16 0 0 0 17-4 16 16 0 0 0 17 4 16 16 0 1 0 10-20 16 16 0 0 0-27-5c-3-4-7-6-12-6zm0 8c5 0 8 4 8 8 0 5-3 8-8 8-4 0-8-3-8-8 0-4 4-8 8-8zm24 0c5 0 8 4 8 8 0 5-3 8-8 8-4 0-8-3-8-8 0-4 4-8 8-8zm-44 10 4 1 4 8c0 4-4 7-8 7s-8-3-8-8c0-4 4-8 8-8zm64 0c5 0 8 4 8 8 0 5-3 8-8 8-4 0-8-3-8-7l4-8z"></path><path fill="none" d="M220 284v12c0 7 5 12 12 12s12-5 12-12v-12z"></path><path fill="#ff9811" d="M200 160h16v32h-16z"></path><path fill="#eee" d="M208 224h48v48h-48z"></path><path fill="#d80027" d="m248 208-8 8h-64l-8-8c0-13 18-24 40-24s40 11 40 24zm-88 16h48v48h-48z"></path><rect width="20" height="32" x="222" y="232" fill="#d80027" rx="10" ry="10"></rect><path fill="#ff9811" d="M168 232v8h8v16h-8v8h32v-8h-8v-16h8v-8zm8-16h64v8h-64z"></path><g fill="#ffda44"><circle cx="186" cy="202" r="6"></circle><circle cx="208" cy="202" r="6"></circle><circle cx="230" cy="202" r="6"></circle></g><path fill="#d80027" d="M169 272v43a24 24 0 0 0 10 4v-47h-10zm20 0v47a24 24 0 0 0 10-4v-43h-10z"></path><g fill="#338af3"><circle cx="208" cy="272" r="16"></circle><rect width="32" height="16" x="264" y="320" ry="8"></rect><rect width="32" height="16" x="120" y="320" ry="8"></rect></g></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Spain</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 156,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 32,300</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 124,500</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Netherlands</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m0 167 253.8-19.3L512 167v178l-254.9 32.3L0 345z"></path><path fill="#a2001d" d="M0 0h512v167H0z"></path><path fill="#0052b4" d="M0 345h512v167H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Netherlands</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 136,400</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 27,400</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 109,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Austria</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="M0 0h512v167l-23.2 89.7L512 345v167H0V345l29.4-89L0 167z"></path><path fill="#eee" d="M0 167h512v178H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Austria</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 127,600</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 24,600</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 103,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>France</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M167 0h178l25.9 252.3L345 512H167l-29.8-253.4z"></path><path fill="#0052b4" d="M0 0h167v512H0z"></path><path fill="#d80027" d="M345 0h167v512H345z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">France</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 124,700</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 25,700</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 99,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>European Union</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#0052b4" d="M0 0h512v512H0z"></path><path fill="#ffda44" d="m256 100.2 8.3 25.5H291l-21.7 15.7 8.3 25.6-21.7-15.8-21.7 15.8 8.3-25.6-21.7-15.7h26.8zm-110.2 45.6 24 12.2 18.9-19-4.2 26.5 23.9 12.2-26.5 4.2-4.2 26.5-12.2-24-26.5 4.3 19-19zM100.2 256l25.5-8.3V221l15.7 21.7 25.6-8.3-15.8 21.7 15.8 21.7-25.6-8.3-15.7 21.7v-26.8zm45.6 110.2 12.2-24-19-18.9 26.5 4.2 12.2-23.9 4.2 26.5 26.5 4.2-24 12.2 4.3 26.5-19-19zM256 411.8l-8.3-25.5H221l21.7-15.7-8.3-25.6 21.7 15.8 21.7-15.8-8.3 25.6 21.7 15.7h-26.8zm110.2-45.6-24-12.2-18.9 19 4.2-26.5-23.9-12.2 26.5-4.2 4.2-26.5 12.2 24 26.5-4.3-19 19zM411.8 256l-25.5 8.3V291l-15.7-21.7-25.6 8.3 15.8-21.7-15.8-21.7 25.6 8.3 15.7-21.7v26.8zm-45.6-110.2-12.2 24 19 18.9-26.5-4.2-12.2 23.9-4.2-26.5-26.5-4.2 24-12.2-4.3-26.5 19 19z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">EU-13</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 124,300</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 25,400</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 98,900</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Italy</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M167 0h178l25.9 252.3L345 512H167l-29.8-253.4z"></path><path fill="#6da544" d="M0 0h167v512H0z"></path><path fill="#d80027" d="M345 0h167v512H345z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Italy</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 115,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 24,200</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 91,600</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Germany</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#ffda44" d="m0 345 256.7-25.5L512 345v167H0z"></path><path fill="#d80027" d="m0 167 255-23 257 23v178H0z"></path><path fill="#333" d="M0 0h512v167H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Germany</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 113,500</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 23,000</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 90,500</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Finland</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h133.6l35.3 16.7L200.3 0H512v222.6l-22.6 31.7 22.6 35.1V512H200.3l-32-19.8-34.7 19.8H0V289.4l22.1-33.3L0 222.6z"></path><path fill="#0052b4" d="M133.6 0v222.6H0v66.8h133.6V512h66.7V289.4H512v-66.8H200.3V0h-66.7z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Finland</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 108,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 23,200</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 85,600</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Slovenia</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#0052b4" d="m0 167 253.8-19.3L512 167v178l-254.9 32.3L0 345z"></path><path fill="#eee" d="M0 0h512v167H0z"></path><path fill="#d80027" d="M0 345h512v167H0z"></path><path fill="#0052b4" d="M222.7 167v-66.8H89V167l67 82.6z"></path><path fill="#eee" d="M89 167v22.2c0 51.1 66.8 66.8 66.8 66.8s66.8-15.7 66.8-66.8V167l-22.3 22.2-44.5-33.4-44.5 33.4z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Slovenia</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 81,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 15,900</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 65,900</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Portugal</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#6da544" d="M0 512h167l37.9-260.3L167 0H0z"></path><path fill="#d80027" d="M512 0H167v512h345z"></path><circle cx="167" cy="256" r="89" fill="#ffda44"></circle><path fill="#d80027" d="M116.9 211.5V267a50 50 0 1 0 100.1 0v-55.6H117z"></path><path fill="#eee" d="M167 283.8c-9.2 0-16.7-7.5-16.7-16.7V245h33.4v22c0 9.2-7.5 16.7-16.7 16.7z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Portugal</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 80,700</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 15,700</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 65,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Lithuania</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#6da544" d="m0 167 253.8-19.3L512 167v178l-254.9 32.3L0 345z"></path><path fill="#ffda44" d="M0 0h512v167H0z"></path><path fill="#d80027" d="M0 345h512v167H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Lithuania</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 60,600</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 11,600</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 49,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Latvia</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#a2001d" d="M0 0h512v189.2l-38.5 70 38.5 63.6V512H0V322.8l39.4-63L0 189.1z"></path><path fill="#eee" d="M0 189.2h512v133.6H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Latvia</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 24,400</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 4,700</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 19,700</td></tr>
+  </tbody>
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-def" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div id="biuasqasdp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#biuasqasdp table {
+  font-family: 'Roboto Slab';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#biuasqasdp thead, #biuasqasdp tbody, #biuasqasdp tfoot, #biuasqasdp tr, #biuasqasdp td, #biuasqasdp th {
+  border-style: none;
+}
+
+#biuasqasdp p {
+  margin: 0;
+  padding: 0;
+}
+
+#biuasqasdp .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#biuasqasdp .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#biuasqasdp .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#biuasqasdp .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#biuasqasdp .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#biuasqasdp .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#biuasqasdp .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#biuasqasdp .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#biuasqasdp .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#biuasqasdp .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#biuasqasdp .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#biuasqasdp .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#biuasqasdp .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#biuasqasdp .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#biuasqasdp .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#biuasqasdp .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#biuasqasdp .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#biuasqasdp .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#biuasqasdp .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#biuasqasdp .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#biuasqasdp .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#biuasqasdp .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#biuasqasdp .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#biuasqasdp .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#biuasqasdp .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#biuasqasdp .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#biuasqasdp .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#biuasqasdp .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#biuasqasdp .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#biuasqasdp .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#biuasqasdp .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#biuasqasdp .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#biuasqasdp .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#biuasqasdp .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#biuasqasdp .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#biuasqasdp .gt_left {
+  text-align: left;
+}
+
+#biuasqasdp .gt_center {
+  text-align: center;
+}
+
+#biuasqasdp .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#biuasqasdp .gt_font_normal {
+  font-weight: normal;
+}
+
+#biuasqasdp .gt_font_bold {
+  font-weight: bold;
+}
+
+#biuasqasdp .gt_font_italic {
+  font-style: italic;
+}
+
+#biuasqasdp .gt_super {
+  font-size: 65%;
+}
+
+#biuasqasdp .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#biuasqasdp .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#biuasqasdp .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#biuasqasdp .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#biuasqasdp .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#biuasqasdp .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#biuasqasdp .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#biuasqasdp .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#biuasqasdp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" style="table-layout:fixed;" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <colgroup>
+    <col>
+    <col>
+    <col style="width:120px;">
+    <col style="width:120px;">
+    <col style="width:120px;">
+  </colgroup>
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="name"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Country"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Average-Inheritance-(w/o-avoidance)">Average Inheritance</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Average-Inheritance-(avoidance)">Estimated avoidance</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Average-Inheritance-(w/-avoidance)">Taxable Inheritance</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Belgium</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#333" d="M0 0h167l38.2 252.6L167 512H0z"></path><path fill="#d80027" d="M345 0h167v512H345l-36.7-256z"></path><path fill="#ffda44" d="M167 0h178v512H167z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Belgium</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right" style="background-color: #FF6347; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: tomato1; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: tomato1;">€ 267,400</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 55,200</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right" style="background-color: #EEB422; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: goldenrod2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: goldenrod2;">€ 212,200</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Ireland</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M167 0h178l25.9 252.3L345 512H167l-29.8-253.4z"></path><path fill="#6da544" d="M0 0h167v512H0z"></path><path fill="#ff9811" d="M345 0h167v512H345z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Ireland</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right" style="background-color: #FF6347; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: tomato1; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: tomato1;">€ 160,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 31,800</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right" style="background-color: #EEB422; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: goldenrod2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: goldenrod2;">€ 129,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Spain</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#ffda44" d="m0 128 256-32 256 32v256l-256 32L0 384Z"></path><path fill="#d80027" d="M0 0h512v128H0zm0 384h512v128H0z"></path><g fill="#eee"><path d="M144 304h-16v-80h16zm128 0h16v-80h-16z"></path><ellipse cx="208" cy="296" rx="48" ry="32"></ellipse></g><g fill="#d80027"><rect width="16" height="24" x="128" y="192" rx="8"></rect><rect width="16" height="24" x="272" y="192" rx="8"></rect><path d="M208 272v24a24 24 0 0 0 24 24 24 24 0 0 0 24-24v-24h-24z"></path></g><rect width="32" height="16" x="120" y="208" fill="#ff9811" ry="8"></rect><rect width="32" height="16" x="264" y="208" fill="#ff9811" ry="8"></rect><rect width="32" height="16" x="120" y="304" fill="#ff9811" rx="8"></rect><rect width="32" height="16" x="264" y="304" fill="#ff9811" rx="8"></rect><path fill="#ff9811" d="M160 272v24c0 8 4 14 9 19l5-6 5 10a21 21 0 0 0 10 0l5-10 5 6c6-5 9-11 9-19v-24h-9l-5 8-5-8h-10l-5 8-5-8z"></path><path d="M122 252h172m-172 24h28m116 0h28"></path><path fill="#d80027" d="M122 248a4 4 0 0 0-4 4 4 4 0 0 0 4 4h172a4 4 0 0 0 4-4 4 4 0 0 0-4-4zm0 24a4 4 0 0 0-4 4 4 4 0 0 0 4 4h28a4 4 0 0 0 4-4 4 4 0 0 0-4-4zm144 0a4 4 0 0 0-4 4 4 4 0 0 0 4 4h28a4 4 0 0 0 4-4 4 4 0 0 0-4-4z"></path><path fill="#eee" d="M196 168c-7 0-13 5-15 11l-5-1c-9 0-16 7-16 16s7 16 16 16c7 0 13-4 15-11a16 16 0 0 0 17-4 16 16 0 0 0 17 4 16 16 0 1 0 10-20 16 16 0 0 0-27-5c-3-4-7-6-12-6zm0 8c5 0 8 4 8 8 0 5-3 8-8 8-4 0-8-3-8-8 0-4 4-8 8-8zm24 0c5 0 8 4 8 8 0 5-3 8-8 8-4 0-8-3-8-8 0-4 4-8 8-8zm-44 10 4 1 4 8c0 4-4 7-8 7s-8-3-8-8c0-4 4-8 8-8zm64 0c5 0 8 4 8 8 0 5-3 8-8 8-4 0-8-3-8-7l4-8z"></path><path fill="none" d="M220 284v12c0 7 5 12 12 12s12-5 12-12v-12z"></path><path fill="#ff9811" d="M200 160h16v32h-16z"></path><path fill="#eee" d="M208 224h48v48h-48z"></path><path fill="#d80027" d="m248 208-8 8h-64l-8-8c0-13 18-24 40-24s40 11 40 24zm-88 16h48v48h-48z"></path><rect width="20" height="32" x="222" y="232" fill="#d80027" rx="10" ry="10"></rect><path fill="#ff9811" d="M168 232v8h8v16h-8v8h32v-8h-8v-16h8v-8zm8-16h64v8h-64z"></path><g fill="#ffda44"><circle cx="186" cy="202" r="6"></circle><circle cx="208" cy="202" r="6"></circle><circle cx="230" cy="202" r="6"></circle></g><path fill="#d80027" d="M169 272v43a24 24 0 0 0 10 4v-47h-10zm20 0v47a24 24 0 0 0 10-4v-43h-10z"></path><g fill="#338af3"><circle cx="208" cy="272" r="16"></circle><rect width="32" height="16" x="264" y="320" ry="8"></rect><rect width="32" height="16" x="120" y="320" ry="8"></rect></g></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Spain</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right" style="background-color: #FF6347; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: tomato1; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: tomato1;">€ 156,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 32,300</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right" style="background-color: #EEB422; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: goldenrod2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: goldenrod2;">€ 124,500</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Netherlands</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m0 167 253.8-19.3L512 167v178l-254.9 32.3L0 345z"></path><path fill="#a2001d" d="M0 0h512v167H0z"></path><path fill="#0052b4" d="M0 345h512v167H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Netherlands</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right" style="background-color: #FF6347; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: tomato1; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: tomato1;">€ 136,400</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 27,400</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right" style="background-color: #EEB422; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: goldenrod2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: goldenrod2;">€ 109,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Austria</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="M0 0h512v167l-23.2 89.7L512 345v167H0V345l29.4-89L0 167z"></path><path fill="#eee" d="M0 167h512v178H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Austria</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right" style="background-color: #FF6347; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: tomato1; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: tomato1;">€ 127,600</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 24,600</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right" style="background-color: #EEB422; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: goldenrod2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: goldenrod2;">€ 103,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>France</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M167 0h178l25.9 252.3L345 512H167l-29.8-253.4z"></path><path fill="#0052b4" d="M0 0h167v512H0z"></path><path fill="#d80027" d="M345 0h167v512H345z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">France</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right" style="background-color: #FF6347; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: tomato1; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: tomato1;">€ 124,700</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 25,700</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right" style="background-color: #EEB422; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: goldenrod2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: goldenrod2;">€ 99,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>European Union</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#0052b4" d="M0 0h512v512H0z"></path><path fill="#ffda44" d="m256 100.2 8.3 25.5H291l-21.7 15.7 8.3 25.6-21.7-15.8-21.7 15.8 8.3-25.6-21.7-15.7h26.8zm-110.2 45.6 24 12.2 18.9-19-4.2 26.5 23.9 12.2-26.5 4.2-4.2 26.5-12.2-24-26.5 4.3 19-19zM100.2 256l25.5-8.3V221l15.7 21.7 25.6-8.3-15.8 21.7 15.8 21.7-25.6-8.3-15.7 21.7v-26.8zm45.6 110.2 12.2-24-19-18.9 26.5 4.2 12.2-23.9 4.2 26.5 26.5 4.2-24 12.2 4.3 26.5-19-19zM256 411.8l-8.3-25.5H221l21.7-15.7-8.3-25.6 21.7 15.8 21.7-15.8-8.3 25.6 21.7 15.7h-26.8zm110.2-45.6-24-12.2-18.9 19 4.2-26.5-23.9-12.2 26.5-4.2 4.2-26.5 12.2 24 26.5-4.3-19 19zM411.8 256l-25.5 8.3V291l-15.7-21.7-25.6 8.3 15.8-21.7-15.8-21.7 25.6 8.3 15.7-21.7v26.8zm-45.6-110.2-12.2 24 19 18.9-26.5-4.2-12.2 23.9-4.2-26.5-26.5-4.2 24-12.2-4.3-26.5 19 19z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">EU-13</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right" style="background-color: #FF6347; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: tomato1; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: tomato1;">€ 124,300</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 25,400</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right" style="background-color: #EEB422; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: goldenrod2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: goldenrod2;">€ 98,900</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Italy</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M167 0h178l25.9 252.3L345 512H167l-29.8-253.4z"></path><path fill="#6da544" d="M0 0h167v512H0z"></path><path fill="#d80027" d="M345 0h167v512H345z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Italy</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right" style="background-color: #FF6347; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: tomato1; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: tomato1;">€ 115,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 24,200</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right" style="background-color: #EEB422; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: goldenrod2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: goldenrod2;">€ 91,600</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Germany</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#ffda44" d="m0 345 256.7-25.5L512 345v167H0z"></path><path fill="#d80027" d="m0 167 255-23 257 23v178H0z"></path><path fill="#333" d="M0 0h512v167H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Germany</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right" style="background-color: #FF6347; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: tomato1; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: tomato1;">€ 113,500</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 23,000</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right" style="background-color: #EEB422; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: goldenrod2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: goldenrod2;">€ 90,500</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Finland</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h133.6l35.3 16.7L200.3 0H512v222.6l-22.6 31.7 22.6 35.1V512H200.3l-32-19.8-34.7 19.8H0V289.4l22.1-33.3L0 222.6z"></path><path fill="#0052b4" d="M133.6 0v222.6H0v66.8h133.6V512h66.7V289.4H512v-66.8H200.3V0h-66.7z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Finland</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right" style="background-color: #FF6347; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: tomato1; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: tomato1;">€ 108,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 23,200</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right" style="background-color: #EEB422; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: goldenrod2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: goldenrod2;">€ 85,600</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Slovenia</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#0052b4" d="m0 167 253.8-19.3L512 167v178l-254.9 32.3L0 345z"></path><path fill="#eee" d="M0 0h512v167H0z"></path><path fill="#d80027" d="M0 345h512v167H0z"></path><path fill="#0052b4" d="M222.7 167v-66.8H89V167l67 82.6z"></path><path fill="#eee" d="M89 167v22.2c0 51.1 66.8 66.8 66.8 66.8s66.8-15.7 66.8-66.8V167l-22.3 22.2-44.5-33.4-44.5 33.4z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Slovenia</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right" style="background-color: #FF6347; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: tomato1; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: tomato1;">€ 81,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 15,900</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right" style="background-color: #EEB422; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: goldenrod2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: goldenrod2;">€ 65,900</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Portugal</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#6da544" d="M0 512h167l37.9-260.3L167 0H0z"></path><path fill="#d80027" d="M512 0H167v512h345z"></path><circle cx="167" cy="256" r="89" fill="#ffda44"></circle><path fill="#d80027" d="M116.9 211.5V267a50 50 0 1 0 100.1 0v-55.6H117z"></path><path fill="#eee" d="M167 283.8c-9.2 0-16.7-7.5-16.7-16.7V245h33.4v22c0 9.2-7.5 16.7-16.7 16.7z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Portugal</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right" style="background-color: #FF6347; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: tomato1; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: tomato1;">€ 80,700</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 15,700</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right" style="background-color: #EEB422; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: goldenrod2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: goldenrod2;">€ 65,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Lithuania</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#6da544" d="m0 167 253.8-19.3L512 167v178l-254.9 32.3L0 345z"></path><path fill="#ffda44" d="M0 0h512v167H0z"></path><path fill="#d80027" d="M0 345h512v167H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Lithuania</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right" style="background-color: #FF6347; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: tomato1; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: tomato1;">€ 60,600</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 11,600</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right" style="background-color: #EEB422; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: goldenrod2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: goldenrod2;">€ 49,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Latvia</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#a2001d" d="M0 0h512v189.2l-38.5 70 38.5 63.6V512H0V322.8l39.4-63L0 189.1z"></path><path fill="#eee" d="M0 189.2h512v133.6H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Latvia</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right" style="background-color: #FF6347; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: tomato1; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: tomato1;">€ 24,400</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 4,700</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right" style="background-color: #EEB422; color: #000000; font-weight: normal; border-top-width: 1px; border-top-style: solid; border-top-color: goldenrod2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: goldenrod2;">€ 19,700</td></tr>
+  </tbody>
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-eu" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div id="jhfnbaglrt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jhfnbaglrt table {
+  font-family: 'Roboto Slab';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#jhfnbaglrt thead, #jhfnbaglrt tbody, #jhfnbaglrt tfoot, #jhfnbaglrt tr, #jhfnbaglrt td, #jhfnbaglrt th {
+  border-style: none;
+}
+
+#jhfnbaglrt p {
+  margin: 0;
+  padding: 0;
+}
+
+#jhfnbaglrt .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#jhfnbaglrt .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#jhfnbaglrt .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#jhfnbaglrt .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#jhfnbaglrt .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jhfnbaglrt .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jhfnbaglrt .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jhfnbaglrt .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#jhfnbaglrt .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#jhfnbaglrt .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#jhfnbaglrt .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#jhfnbaglrt .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#jhfnbaglrt .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#jhfnbaglrt .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#jhfnbaglrt .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#jhfnbaglrt .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#jhfnbaglrt .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#jhfnbaglrt .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#jhfnbaglrt .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jhfnbaglrt .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#jhfnbaglrt .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#jhfnbaglrt .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#jhfnbaglrt .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jhfnbaglrt .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#jhfnbaglrt .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#jhfnbaglrt .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jhfnbaglrt .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jhfnbaglrt .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#jhfnbaglrt .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jhfnbaglrt .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#jhfnbaglrt .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jhfnbaglrt .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jhfnbaglrt .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jhfnbaglrt .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jhfnbaglrt .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jhfnbaglrt .gt_left {
+  text-align: left;
+}
+
+#jhfnbaglrt .gt_center {
+  text-align: center;
+}
+
+#jhfnbaglrt .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#jhfnbaglrt .gt_font_normal {
+  font-weight: normal;
+}
+
+#jhfnbaglrt .gt_font_bold {
+  font-weight: bold;
+}
+
+#jhfnbaglrt .gt_font_italic {
+  font-style: italic;
+}
+
+#jhfnbaglrt .gt_super {
+  font-size: 65%;
+}
+
+#jhfnbaglrt .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#jhfnbaglrt .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#jhfnbaglrt .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#jhfnbaglrt .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#jhfnbaglrt .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#jhfnbaglrt .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#jhfnbaglrt .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#jhfnbaglrt .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#jhfnbaglrt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" style="table-layout:fixed;" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <colgroup>
+    <col>
+    <col>
+    <col style="width:120px;">
+    <col style="width:120px;">
+    <col style="width:120px;">
+  </colgroup>
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="name"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Country"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Average-Inheritance-(w/o-avoidance)">Average Inheritance</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Average-Inheritance-(avoidance)">Estimated avoidance</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Average-Inheritance-(w/-avoidance)">Taxable Inheritance</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Belgium</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#333" d="M0 0h167l38.2 252.6L167 512H0z"></path><path fill="#d80027" d="M345 0h167v512H345l-36.7-256z"></path><path fill="#ffda44" d="M167 0h178v512H167z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Belgium</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 267,400</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 55,200</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 212,200</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Ireland</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M167 0h178l25.9 252.3L345 512H167l-29.8-253.4z"></path><path fill="#6da544" d="M0 0h167v512H0z"></path><path fill="#ff9811" d="M345 0h167v512H345z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Ireland</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 160,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 31,800</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 129,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Spain</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#ffda44" d="m0 128 256-32 256 32v256l-256 32L0 384Z"></path><path fill="#d80027" d="M0 0h512v128H0zm0 384h512v128H0z"></path><g fill="#eee"><path d="M144 304h-16v-80h16zm128 0h16v-80h-16z"></path><ellipse cx="208" cy="296" rx="48" ry="32"></ellipse></g><g fill="#d80027"><rect width="16" height="24" x="128" y="192" rx="8"></rect><rect width="16" height="24" x="272" y="192" rx="8"></rect><path d="M208 272v24a24 24 0 0 0 24 24 24 24 0 0 0 24-24v-24h-24z"></path></g><rect width="32" height="16" x="120" y="208" fill="#ff9811" ry="8"></rect><rect width="32" height="16" x="264" y="208" fill="#ff9811" ry="8"></rect><rect width="32" height="16" x="120" y="304" fill="#ff9811" rx="8"></rect><rect width="32" height="16" x="264" y="304" fill="#ff9811" rx="8"></rect><path fill="#ff9811" d="M160 272v24c0 8 4 14 9 19l5-6 5 10a21 21 0 0 0 10 0l5-10 5 6c6-5 9-11 9-19v-24h-9l-5 8-5-8h-10l-5 8-5-8z"></path><path d="M122 252h172m-172 24h28m116 0h28"></path><path fill="#d80027" d="M122 248a4 4 0 0 0-4 4 4 4 0 0 0 4 4h172a4 4 0 0 0 4-4 4 4 0 0 0-4-4zm0 24a4 4 0 0 0-4 4 4 4 0 0 0 4 4h28a4 4 0 0 0 4-4 4 4 0 0 0-4-4zm144 0a4 4 0 0 0-4 4 4 4 0 0 0 4 4h28a4 4 0 0 0 4-4 4 4 0 0 0-4-4z"></path><path fill="#eee" d="M196 168c-7 0-13 5-15 11l-5-1c-9 0-16 7-16 16s7 16 16 16c7 0 13-4 15-11a16 16 0 0 0 17-4 16 16 0 0 0 17 4 16 16 0 1 0 10-20 16 16 0 0 0-27-5c-3-4-7-6-12-6zm0 8c5 0 8 4 8 8 0 5-3 8-8 8-4 0-8-3-8-8 0-4 4-8 8-8zm24 0c5 0 8 4 8 8 0 5-3 8-8 8-4 0-8-3-8-8 0-4 4-8 8-8zm-44 10 4 1 4 8c0 4-4 7-8 7s-8-3-8-8c0-4 4-8 8-8zm64 0c5 0 8 4 8 8 0 5-3 8-8 8-4 0-8-3-8-7l4-8z"></path><path fill="none" d="M220 284v12c0 7 5 12 12 12s12-5 12-12v-12z"></path><path fill="#ff9811" d="M200 160h16v32h-16z"></path><path fill="#eee" d="M208 224h48v48h-48z"></path><path fill="#d80027" d="m248 208-8 8h-64l-8-8c0-13 18-24 40-24s40 11 40 24zm-88 16h48v48h-48z"></path><rect width="20" height="32" x="222" y="232" fill="#d80027" rx="10" ry="10"></rect><path fill="#ff9811" d="M168 232v8h8v16h-8v8h32v-8h-8v-16h8v-8zm8-16h64v8h-64z"></path><g fill="#ffda44"><circle cx="186" cy="202" r="6"></circle><circle cx="208" cy="202" r="6"></circle><circle cx="230" cy="202" r="6"></circle></g><path fill="#d80027" d="M169 272v43a24 24 0 0 0 10 4v-47h-10zm20 0v47a24 24 0 0 0 10-4v-43h-10z"></path><g fill="#338af3"><circle cx="208" cy="272" r="16"></circle><rect width="32" height="16" x="264" y="320" ry="8"></rect><rect width="32" height="16" x="120" y="320" ry="8"></rect></g></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Spain</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 156,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 32,300</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 124,500</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Netherlands</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m0 167 253.8-19.3L512 167v178l-254.9 32.3L0 345z"></path><path fill="#a2001d" d="M0 0h512v167H0z"></path><path fill="#0052b4" d="M0 345h512v167H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Netherlands</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 136,400</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 27,400</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 109,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Austria</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="M0 0h512v167l-23.2 89.7L512 345v167H0V345l29.4-89L0 167z"></path><path fill="#eee" d="M0 167h512v178H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Austria</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 127,600</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 24,600</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 103,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>France</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M167 0h178l25.9 252.3L345 512H167l-29.8-253.4z"></path><path fill="#0052b4" d="M0 0h167v512H0z"></path><path fill="#d80027" d="M345 0h167v512H345z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">France</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 124,700</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 25,700</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 99,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left" style="background-color: rgba(173,216,230,0.8); color: #000000; font-weight: normal;"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>European Union</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#0052b4" d="M0 0h512v512H0z"></path><path fill="#ffda44" d="m256 100.2 8.3 25.5H291l-21.7 15.7 8.3 25.6-21.7-15.8-21.7 15.8 8.3-25.6-21.7-15.7h26.8zm-110.2 45.6 24 12.2 18.9-19-4.2 26.5 23.9 12.2-26.5 4.2-4.2 26.5-12.2-24-26.5 4.3 19-19zM100.2 256l25.5-8.3V221l15.7 21.7 25.6-8.3-15.8 21.7 15.8 21.7-25.6-8.3-15.7 21.7v-26.8zm45.6 110.2 12.2-24-19-18.9 26.5 4.2 12.2-23.9 4.2 26.5 26.5 4.2-24 12.2 4.3 26.5-19-19zM256 411.8l-8.3-25.5H221l21.7-15.7-8.3-25.6 21.7 15.8 21.7-15.8-8.3 25.6 21.7 15.7h-26.8zm110.2-45.6-24-12.2-18.9 19 4.2-26.5-23.9-12.2 26.5-4.2 4.2-26.5 12.2 24 26.5-4.3-19 19zM411.8 256l-25.5 8.3V291l-15.7-21.7-25.6 8.3 15.8-21.7-15.8-21.7 25.6 8.3 15.7-21.7v26.8zm-45.6-110.2-12.2 24 19 18.9-26.5-4.2-12.2 23.9-4.2-26.5-26.5-4.2 24-12.2-4.3-26.5 19 19z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left" style="background-color: rgba(173,216,230,0.8); color: #000000; font-weight: normal;">EU-13</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right" style="background-color: rgba(173,216,230,0.8); color: #000000; font-weight: normal;">€ 124,300</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right" style="background-color: rgba(173,216,230,0.8); color: #000000; font-weight: normal;">€ 25,400</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right" style="background-color: rgba(173,216,230,0.8); color: #000000; font-weight: normal;">€ 98,900</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Italy</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M167 0h178l25.9 252.3L345 512H167l-29.8-253.4z"></path><path fill="#6da544" d="M0 0h167v512H0z"></path><path fill="#d80027" d="M345 0h167v512H345z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Italy</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 115,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 24,200</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 91,600</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Germany</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#ffda44" d="m0 345 256.7-25.5L512 345v167H0z"></path><path fill="#d80027" d="m0 167 255-23 257 23v178H0z"></path><path fill="#333" d="M0 0h512v167H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Germany</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 113,500</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 23,000</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 90,500</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Finland</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h133.6l35.3 16.7L200.3 0H512v222.6l-22.6 31.7 22.6 35.1V512H200.3l-32-19.8-34.7 19.8H0V289.4l22.1-33.3L0 222.6z"></path><path fill="#0052b4" d="M133.6 0v222.6H0v66.8h133.6V512h66.7V289.4H512v-66.8H200.3V0h-66.7z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Finland</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 108,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 23,200</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 85,600</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Slovenia</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#0052b4" d="m0 167 253.8-19.3L512 167v178l-254.9 32.3L0 345z"></path><path fill="#eee" d="M0 0h512v167H0z"></path><path fill="#d80027" d="M0 345h512v167H0z"></path><path fill="#0052b4" d="M222.7 167v-66.8H89V167l67 82.6z"></path><path fill="#eee" d="M89 167v22.2c0 51.1 66.8 66.8 66.8 66.8s66.8-15.7 66.8-66.8V167l-22.3 22.2-44.5-33.4-44.5 33.4z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Slovenia</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 81,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 15,900</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 65,900</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Portugal</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#6da544" d="M0 512h167l37.9-260.3L167 0H0z"></path><path fill="#d80027" d="M512 0H167v512h345z"></path><circle cx="167" cy="256" r="89" fill="#ffda44"></circle><path fill="#d80027" d="M116.9 211.5V267a50 50 0 1 0 100.1 0v-55.6H117z"></path><path fill="#eee" d="M167 283.8c-9.2 0-16.7-7.5-16.7-16.7V245h33.4v22c0 9.2-7.5 16.7-16.7 16.7z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Portugal</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 80,700</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 15,700</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 65,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Lithuania</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#6da544" d="m0 167 253.8-19.3L512 167v178l-254.9 32.3L0 345z"></path><path fill="#ffda44" d="M0 0h512v167H0z"></path><path fill="#d80027" d="M0 345h512v167H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Lithuania</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 60,600</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 11,600</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 49,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Latvia</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#a2001d" d="M0 0h512v189.2l-38.5 70 38.5 63.6V512H0V322.8l39.4-63L0 189.1z"></path><path fill="#eee" d="M0 189.2h512v133.6H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Latvia</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 24,400</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 4,700</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 19,700</td></tr>
+  </tbody>
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-max" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div id="lmmqmcesio" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lmmqmcesio table {
+  font-family: 'Roboto Slab';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#lmmqmcesio thead, #lmmqmcesio tbody, #lmmqmcesio tfoot, #lmmqmcesio tr, #lmmqmcesio td, #lmmqmcesio th {
+  border-style: none;
+}
+
+#lmmqmcesio p {
+  margin: 0;
+  padding: 0;
+}
+
+#lmmqmcesio .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#lmmqmcesio .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#lmmqmcesio .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#lmmqmcesio .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#lmmqmcesio .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#lmmqmcesio .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#lmmqmcesio .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#lmmqmcesio .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#lmmqmcesio .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#lmmqmcesio .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#lmmqmcesio .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#lmmqmcesio .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#lmmqmcesio .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#lmmqmcesio .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#lmmqmcesio .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#lmmqmcesio .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#lmmqmcesio .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#lmmqmcesio .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#lmmqmcesio .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lmmqmcesio .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#lmmqmcesio .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#lmmqmcesio .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#lmmqmcesio .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lmmqmcesio .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#lmmqmcesio .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#lmmqmcesio .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#lmmqmcesio .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lmmqmcesio .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#lmmqmcesio .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#lmmqmcesio .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#lmmqmcesio .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#lmmqmcesio .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#lmmqmcesio .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lmmqmcesio .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#lmmqmcesio .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lmmqmcesio .gt_left {
+  text-align: left;
+}
+
+#lmmqmcesio .gt_center {
+  text-align: center;
+}
+
+#lmmqmcesio .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#lmmqmcesio .gt_font_normal {
+  font-weight: normal;
+}
+
+#lmmqmcesio .gt_font_bold {
+  font-weight: bold;
+}
+
+#lmmqmcesio .gt_font_italic {
+  font-style: italic;
+}
+
+#lmmqmcesio .gt_super {
+  font-size: 65%;
+}
+
+#lmmqmcesio .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#lmmqmcesio .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#lmmqmcesio .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#lmmqmcesio .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#lmmqmcesio .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#lmmqmcesio .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#lmmqmcesio .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#lmmqmcesio .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#lmmqmcesio div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" style="table-layout:fixed;" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <colgroup>
+    <col>
+    <col>
+    <col style="width:120px;">
+    <col style="width:120px;">
+    <col style="width:120px;">
+  </colgroup>
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="name"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Country"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Average-Inheritance-(w/o-avoidance)">Average Inheritance</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Average-Inheritance-(avoidance)">Estimated avoidance</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Average-Inheritance-(w/-avoidance)">Taxable Inheritance</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="name" class="gt_row gt_left" style="background-color: rgba(173,216,230,0.8); color: #000000; font-weight: normal;"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Belgium</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#333" d="M0 0h167l38.2 252.6L167 512H0z"></path><path fill="#d80027" d="M345 0h167v512H345l-36.7-256z"></path><path fill="#ffda44" d="M167 0h178v512H167z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left" style="background-color: rgba(173,216,230,0.8); color: #000000; font-weight: normal;">Belgium</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right" style="background-color: rgba(173,216,230,0.8); color: #000000; font-weight: normal;">€ 267,400</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right" style="background-color: rgba(173,216,230,0.8); color: #000000; font-weight: normal;">€ 55,200</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right" style="background-color: rgba(173,216,230,0.8); color: #000000; font-weight: normal;">€ 212,200</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Ireland</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M167 0h178l25.9 252.3L345 512H167l-29.8-253.4z"></path><path fill="#6da544" d="M0 0h167v512H0z"></path><path fill="#ff9811" d="M345 0h167v512H345z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Ireland</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 160,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 31,800</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 129,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Spain</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#ffda44" d="m0 128 256-32 256 32v256l-256 32L0 384Z"></path><path fill="#d80027" d="M0 0h512v128H0zm0 384h512v128H0z"></path><g fill="#eee"><path d="M144 304h-16v-80h16zm128 0h16v-80h-16z"></path><ellipse cx="208" cy="296" rx="48" ry="32"></ellipse></g><g fill="#d80027"><rect width="16" height="24" x="128" y="192" rx="8"></rect><rect width="16" height="24" x="272" y="192" rx="8"></rect><path d="M208 272v24a24 24 0 0 0 24 24 24 24 0 0 0 24-24v-24h-24z"></path></g><rect width="32" height="16" x="120" y="208" fill="#ff9811" ry="8"></rect><rect width="32" height="16" x="264" y="208" fill="#ff9811" ry="8"></rect><rect width="32" height="16" x="120" y="304" fill="#ff9811" rx="8"></rect><rect width="32" height="16" x="264" y="304" fill="#ff9811" rx="8"></rect><path fill="#ff9811" d="M160 272v24c0 8 4 14 9 19l5-6 5 10a21 21 0 0 0 10 0l5-10 5 6c6-5 9-11 9-19v-24h-9l-5 8-5-8h-10l-5 8-5-8z"></path><path d="M122 252h172m-172 24h28m116 0h28"></path><path fill="#d80027" d="M122 248a4 4 0 0 0-4 4 4 4 0 0 0 4 4h172a4 4 0 0 0 4-4 4 4 0 0 0-4-4zm0 24a4 4 0 0 0-4 4 4 4 0 0 0 4 4h28a4 4 0 0 0 4-4 4 4 0 0 0-4-4zm144 0a4 4 0 0 0-4 4 4 4 0 0 0 4 4h28a4 4 0 0 0 4-4 4 4 0 0 0-4-4z"></path><path fill="#eee" d="M196 168c-7 0-13 5-15 11l-5-1c-9 0-16 7-16 16s7 16 16 16c7 0 13-4 15-11a16 16 0 0 0 17-4 16 16 0 0 0 17 4 16 16 0 1 0 10-20 16 16 0 0 0-27-5c-3-4-7-6-12-6zm0 8c5 0 8 4 8 8 0 5-3 8-8 8-4 0-8-3-8-8 0-4 4-8 8-8zm24 0c5 0 8 4 8 8 0 5-3 8-8 8-4 0-8-3-8-8 0-4 4-8 8-8zm-44 10 4 1 4 8c0 4-4 7-8 7s-8-3-8-8c0-4 4-8 8-8zm64 0c5 0 8 4 8 8 0 5-3 8-8 8-4 0-8-3-8-7l4-8z"></path><path fill="none" d="M220 284v12c0 7 5 12 12 12s12-5 12-12v-12z"></path><path fill="#ff9811" d="M200 160h16v32h-16z"></path><path fill="#eee" d="M208 224h48v48h-48z"></path><path fill="#d80027" d="m248 208-8 8h-64l-8-8c0-13 18-24 40-24s40 11 40 24zm-88 16h48v48h-48z"></path><rect width="20" height="32" x="222" y="232" fill="#d80027" rx="10" ry="10"></rect><path fill="#ff9811" d="M168 232v8h8v16h-8v8h32v-8h-8v-16h8v-8zm8-16h64v8h-64z"></path><g fill="#ffda44"><circle cx="186" cy="202" r="6"></circle><circle cx="208" cy="202" r="6"></circle><circle cx="230" cy="202" r="6"></circle></g><path fill="#d80027" d="M169 272v43a24 24 0 0 0 10 4v-47h-10zm20 0v47a24 24 0 0 0 10-4v-43h-10z"></path><g fill="#338af3"><circle cx="208" cy="272" r="16"></circle><rect width="32" height="16" x="264" y="320" ry="8"></rect><rect width="32" height="16" x="120" y="320" ry="8"></rect></g></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Spain</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 156,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 32,300</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 124,500</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Netherlands</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m0 167 253.8-19.3L512 167v178l-254.9 32.3L0 345z"></path><path fill="#a2001d" d="M0 0h512v167H0z"></path><path fill="#0052b4" d="M0 345h512v167H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Netherlands</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 136,400</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 27,400</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 109,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Austria</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="M0 0h512v167l-23.2 89.7L512 345v167H0V345l29.4-89L0 167z"></path><path fill="#eee" d="M0 167h512v178H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Austria</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 127,600</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 24,600</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 103,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>France</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M167 0h178l25.9 252.3L345 512H167l-29.8-253.4z"></path><path fill="#0052b4" d="M0 0h167v512H0z"></path><path fill="#d80027" d="M345 0h167v512H345z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">France</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 124,700</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 25,700</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 99,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>European Union</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#0052b4" d="M0 0h512v512H0z"></path><path fill="#ffda44" d="m256 100.2 8.3 25.5H291l-21.7 15.7 8.3 25.6-21.7-15.8-21.7 15.8 8.3-25.6-21.7-15.7h26.8zm-110.2 45.6 24 12.2 18.9-19-4.2 26.5 23.9 12.2-26.5 4.2-4.2 26.5-12.2-24-26.5 4.3 19-19zM100.2 256l25.5-8.3V221l15.7 21.7 25.6-8.3-15.8 21.7 15.8 21.7-25.6-8.3-15.7 21.7v-26.8zm45.6 110.2 12.2-24-19-18.9 26.5 4.2 12.2-23.9 4.2 26.5 26.5 4.2-24 12.2 4.3 26.5-19-19zM256 411.8l-8.3-25.5H221l21.7-15.7-8.3-25.6 21.7 15.8 21.7-15.8-8.3 25.6 21.7 15.7h-26.8zm110.2-45.6-24-12.2-18.9 19 4.2-26.5-23.9-12.2 26.5-4.2 4.2-26.5 12.2 24 26.5-4.3-19 19zM411.8 256l-25.5 8.3V291l-15.7-21.7-25.6 8.3 15.8-21.7-15.8-21.7 25.6 8.3 15.7-21.7v26.8zm-45.6-110.2-12.2 24 19 18.9-26.5-4.2-12.2 23.9-4.2-26.5-26.5-4.2 24-12.2-4.3-26.5 19 19z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">EU-13</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 124,300</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 25,400</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 98,900</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Italy</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M167 0h178l25.9 252.3L345 512H167l-29.8-253.4z"></path><path fill="#6da544" d="M0 0h167v512H0z"></path><path fill="#d80027" d="M345 0h167v512H345z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Italy</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 115,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 24,200</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 91,600</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Germany</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#ffda44" d="m0 345 256.7-25.5L512 345v167H0z"></path><path fill="#d80027" d="m0 167 255-23 257 23v178H0z"></path><path fill="#333" d="M0 0h512v167H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Germany</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 113,500</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 23,000</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 90,500</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Finland</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h133.6l35.3 16.7L200.3 0H512v222.6l-22.6 31.7 22.6 35.1V512H200.3l-32-19.8-34.7 19.8H0V289.4l22.1-33.3L0 222.6z"></path><path fill="#0052b4" d="M133.6 0v222.6H0v66.8h133.6V512h66.7V289.4H512v-66.8H200.3V0h-66.7z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Finland</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 108,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 23,200</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 85,600</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Slovenia</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#0052b4" d="m0 167 253.8-19.3L512 167v178l-254.9 32.3L0 345z"></path><path fill="#eee" d="M0 0h512v167H0z"></path><path fill="#d80027" d="M0 345h512v167H0z"></path><path fill="#0052b4" d="M222.7 167v-66.8H89V167l67 82.6z"></path><path fill="#eee" d="M89 167v22.2c0 51.1 66.8 66.8 66.8 66.8s66.8-15.7 66.8-66.8V167l-22.3 22.2-44.5-33.4-44.5 33.4z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Slovenia</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 81,800</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 15,900</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 65,900</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Portugal</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#6da544" d="M0 512h167l37.9-260.3L167 0H0z"></path><path fill="#d80027" d="M512 0H167v512h345z"></path><circle cx="167" cy="256" r="89" fill="#ffda44"></circle><path fill="#d80027" d="M116.9 211.5V267a50 50 0 1 0 100.1 0v-55.6H117z"></path><path fill="#eee" d="M167 283.8c-9.2 0-16.7-7.5-16.7-16.7V245h33.4v22c0 9.2-7.5 16.7-16.7 16.7z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Portugal</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 80,700</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 15,700</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 65,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Lithuania</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#6da544" d="m0 167 253.8-19.3L512 167v178l-254.9 32.3L0 345z"></path><path fill="#ffda44" d="M0 0h512v167H0z"></path><path fill="#d80027" d="M0 345h512v167H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left">Lithuania</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right">€ 60,600</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right">€ 11,600</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right">€ 49,000</td></tr>
+    <tr><td headers="name" class="gt_row gt_left" style="background-color: rgba(173,216,230,0.8); color: #000000; font-weight: normal;"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Latvia</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#a2001d" d="M0 0h512v189.2l-38.5 70 38.5 63.6V512H0V322.8l39.4-63L0 189.1z"></path><path fill="#eee" d="M0 189.2h512v133.6H0z"></path></g></svg></span></td>
+<td headers="Country" class="gt_row gt_left" style="background-color: rgba(173,216,230,0.8); color: #000000; font-weight: normal;">Latvia</td>
+<td headers="Average Inheritance (w/o avoidance)" class="gt_row gt_right" style="background-color: rgba(173,216,230,0.8); color: #000000; font-weight: normal;">€ 24,400</td>
+<td headers="Average Inheritance (avoidance)" class="gt_row gt_right" style="background-color: rgba(173,216,230,0.8); color: #000000; font-weight: normal;">€ 4,700</td>
+<td headers="Average Inheritance (w/ avoidance)" class="gt_row gt_right" style="background-color: rgba(173,216,230,0.8); color: #000000; font-weight: normal;">€ 19,700</td></tr>
+  </tbody>
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Average values aside, the distribution of inheritances across heirs is highly concentrated. This has been documented in previous studies for single countries or country groups <span class="citation" data-cites="morelli_influence_2025 elinder_inheritance_2018 boserup_role_2016">[<a href="#ref-boserup_role_2016" role="doc-biblioref">4</a>,<a href="#ref-elinder_inheritance_2018" role="doc-biblioref">7</a>,<a href="#ref-morelli_influence_2025" role="doc-biblioref">14</a>]</span>. The following figure shows the distribution of inheritances across percentiles, with the black bars indicating the average tax due under prevailing country-specific regimes. It can be seen, that roughly three quarters of heirs do not owe any inheritance tax as the received amount falls well below the respective threshold. The labels show the average after-tax inheritance at selected percentiles.</p>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-dist">
+<div class="narrative">
+
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-dist-med">
+<div class="narrative">
+<p>The median inheritance across all 13 countries is around €20,000 — substantially below the mean of €99,000 — indicating considerable right-skewness in the distribution. The bottom half of distribution does not receive substantial wealth transfers.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-dist-99">
+<div class="narrative">
+<p>Concentration is most pronounced at the top. Heirs at the 99th percentile receive on average around €576,000, while those in the top percentile inherit an average of €2,968,000. This fivefold gap between the 99th percentile and the top 1% implies that a large share of the aggregate tax base is concentrated among a small number of heirs. Even at the top percentile, the average effective tax rate amounts to approximately 14%.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-dist">
+<div class="narrative">
+
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-dist" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/dist-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-dist-med" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/dist-med-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-dist-99" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/dist-99-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br>
+</p>
+</section>
+<section id="which-tax-scenarios-are-simulated" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="which-tax-scenarios-are-simulated">Which tax scenarios are simulated?</h2>
+<p>We simulate three tax designs that differ in their coverage, rate structure, and policy rationale.</p>
+<p>The <strong>French scenario</strong> applies France’s rate structure — which generates the highest inheritance tax revenues as a share of GDP among EU member states — to all 13 countries, adjusting monetary thresholds proportionally to national median net wealth. Around 1 in 6 heirs would face a tax liability, with a cross-country average of €281,000.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>The tax exempt threshold for direct descendants amounts to € 100,000 in France, which equals roughly 80% of median net wealth. The tax rates range between 5 and 45%.</p>
+</div></div><p>The <strong>main residence scenario</strong> sets the exemption threshold at the national mean value of main residences, ensuring that typical housing inheritances remain untaxed while subjecting larger estates to progressive rates <span class="citation" data-cites="oecd_inheritance_2021">[<a href="#ref-oecd_inheritance_2021" role="doc-biblioref">15</a>]</span>. The narrower coverage results in fewer affected heirs (~5%) but a higher average liability (~€1 million).</p>
+<p>The <strong>Top 1% scenario</strong> implements an inheritance tax rate of 50% proposed by Piketty and Saez <span class="citation" data-cites="piketty_theory_2013">[<a href="#ref-piketty_theory_2013" role="doc-biblioref">18</a>]</span>, applied above a threshold calibrated to the 99th percentile of each country’s inheritance distribution. By construction, 99% of heirs are unaffected.</p>
+<p><br>
+</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Scenario</th>
+<th style="text-align: left;">Affected heirs</th>
+<th style="text-align: left;">Design</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>French</strong></td>
+<td style="text-align: left;">~18%</td>
+<td style="text-align: left;">France’s progressive schedule, with thresholds rescaled to each country’s median wealth</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Main residence</strong></td>
+<td style="text-align: left;">~5%</td>
+<td style="text-align: left;">Tax-free threshold set at the national mean home value; two-bracket rate structure above</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Top 1%</strong></td>
+<td style="text-align: left;">~1%</td>
+<td style="text-align: left;">Flat 50% marginal rate applied exclusively to the top percentile of inheritances</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+</p>
+</section>
+<section id="how-much-revenue-could-a-european-inheritance-tax-raise" class="level2">
+<h2 class="anchored" data-anchor-id="how-much-revenue-could-a-european-inheritance-tax-raise">How much revenue could a European inheritance tax raise?</h2>
+<p>We estimate inheritance tax revenues across all 13 countries for the three scenarios in 2025. Applying the French schedule yields the highest aggregate revenue with € 71 billion (0.47% of GDP), followed closely by the Top 1% scenario with € 74 billion (0.48% of GDP). The scenario exempting main residences generates the lowest revenue with € 47 billion (0.31% of GDP), reflecting its narrower coverage.</p>
+<p>While well below major revenue sources, these figures are non-trivial relative to existing inheritance tax yields, and are projected to increase considerably over the coming decades.</p>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-revenue">
+<div class="narrative">
+
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-revenue">
+<div class="narrative">
+<p>By 2050, simulated revenues as a share of GDP increase by 45–65% relative to the 2025 baseline across all three scenarios — a rate of growth that exceeds projected GDP growth in most countries, implying a rising revenue-to-GDP ratio even under unchanged policy.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-revaut">
+<div class="narrative">
+<p>Austria exhibits the strongest growth across all scenarios, consistent with its steep age-wealth gradient.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-revlit">
+<div class="narrative">
+<p>Latvia and Lithuania record more modest revenue growth, in line with their flatter inheritance trajectories.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-revenue">
+<div class="narrative">
+<p>Several countries — Finland, Belgium, France — are projected to see revenues plateau or decline after 2040 as the largest baby-boom cohorts are progressively exhausted. This pattern underscores that the growth in inheritance volumes has a transitory demographic component and is not a permanent structural shift.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-revenue" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/revenue-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-revaut" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/revaut-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-revlit" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/revlit-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br>
+</p>
+</section>
+<section id="what-are-the-distributional-effects-of-inheritance-taxation" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-are-the-distributional-effects-of-inheritance-taxation">What are the distributional effects of inheritance taxation?</h2>
+<p>Beyond revenue, inheritance taxes can affect the distribution of wealth. We assess this by computing Gini coefficients and top-wealth shares before and after each tax scenario.</p>
+<p>Under current country-specific regimes, the aggregate Gini falls by less than one point relative to the pre-tax benchmark, confirming that existing systems exert limited redistributive impact despite their structural complexity.</p>
+<p>The three counterfactual scenarios produce more substantial, though still moderate, reductions. The Top 1% scenario achieves the largest redistributive effect: the aggregate EU-13 Gini falls from 74.0 to 71.5, and the top 1% wealth share declines by 6.5 percentage points. This outcome follows from the scenario’s design — concentrating the tax on the transfers that empirical evidence identifies as most inequality-amplifying <span class="citation" data-cites="morelli_influence_2025 elinder_inheritance_2018">[<a href="#ref-elinder_inheritance_2018" role="doc-biblioref">7</a>,<a href="#ref-morelli_influence_2025" role="doc-biblioref">14</a>]</span>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Even under the most redistributive scenario, the top 1% retains more than a quarter of aggregate wealth.</p>
+</div></div><p>The French and main residence scenarios produce broadly comparable aggregate Gini reductions, though through different incidence patterns: the French scenario affects a wider share of heirs across the upper-middle of the distribution, while the main residence scenario leaves most households untouched while applying higher rates to the very largest estates.</p>
+<p><br>
+</p>
+</section>
+<section id="policy-implications" class="level2">
+<h2 class="anchored" data-anchor-id="policy-implications">Policy implications</h2>
+<p>Several findings have direct relevance for policy design.</p>
+<p>The high concentration of inheritances — where the top percentile receives nearly 150 times the median — implies that substantial revenue and redistribution can be achieved while leaving the large majority of heirs unaffected. Current systems underperform relative to this potential, with effective tax rates at the top percentile averaging only around 14% across the sample; narrow bases, generous exemptions, and tax planning account for much of the gap.</p>
+<p>The projected growth in inheritance volumes strengthens the fiscal case for reform. Under all three scenarios, inheritance tax revenues grow faster than GDP between 2025 and 2050, implying that well-designed taxes would become an increasingly significant revenue source without requiring rate increases. The timing is relevant: as the wealthiest baby-boom cohorts age, the effective tax base is at or near its historical peak.</p>
+<p>Tax design matters as much as the headline rate. A 50% marginal rate applied to the top 1% generates revenues comparable to the French scenario, which taxes 18 times more heirs. The appropriate choice between broad-based and targeted designs will depend on administrative capacity, political economy constraints, and distributional objectives.</p>
+<p>Finally, the cross-border dimension warrants attention. The current patchwork of national regimes — with wide variation in thresholds, rates, and asset treatment — creates scope for avoidance through cross-border planning <span class="citation" data-cites="schratzenstaller_behavioral_2025 piketty_rethinking_2023">[<a href="#ref-piketty_rethinking_2023" role="doc-biblioref">19</a>,<a href="#ref-schratzenstaller_behavioral_2025" role="doc-biblioref">22</a>]</span>. Greater coordination across EU member states would reduce such opportunities and could limit downward competitive pressure on effective rates.</p>
+<p><br>
+</p>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>References
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="refs" class="references csl-bib-body hanging-indent" style="font-size:0.8rem;" data-entry-spacing="0" role="list">
+<div id="ref-advani_reforming_2023" class="csl-entry" role="listitem">
+Advani, Arun/Sturrock, David (2023). Reforming Inheritance Tax. <em>IFS Report</em>. DOI: <a href="https://doi.org/10.1920/re.ifs.2023.0275">10.1920/re.ifs.2023.0275</a>
+</div>
+<div id="ref-alvaredo_share_2017" class="csl-entry" role="listitem">
+Alvaredo, Facundo/Garbinti, Bertrand/Piketty, Thomas (2017). On the Share of Inheritance in Aggregate Wealth: <span>Europe</span> and the <span>USA</span>, 1900–2010. <em>Economica</em>, <em>84</em>(334), 239–260. DOI: <a href="https://doi.org/10.1111/ecca.12233">10.1111/ecca.12233</a>
+</div>
+<div id="ref-bach_aufkommens_2012" class="csl-entry" role="listitem">
+Bach, Stefan/Beznoska, Martin (2012). <em>Aufkommens- und <span>Verteilungswirkungen</span> einer <span>Wiederbelebung</span> der <span class="nocase">Verm<span class="nocase">ö</span>genssteuer</span></em> (No. 68). DIW Berlin.
+</div>
+<div id="ref-boserup_role_2016" class="csl-entry" role="listitem">
+Boserup, Simon H./Kopczuk, Wojciech/Kreiner, Claus T. (2016). The Role of Bequests in Shaping Wealth Inequality: <span>Evidence</span> from <span>Danish</span> Wealth Records. <em>American Economic Review: Papers &amp; Proceedings</em>, <em>106</em>(5), 656–661. DOI: <a href="https://doi.org/10.1257/aer.p20161036">10.1257/aer.p20161036</a>
+</div>
+<div id="ref-cantarella_estimating_2024" class="csl-entry" role="listitem">
+Cantarella, Michele/Neri, Andrea/Ranalli, Maria Giovanna (2024). Estimating the Distribution of Household Wealth: <span>Methods</span> for Adjusting Survey Data Estimates Using National Accounts and Rich List Data. <em>Review of Income and Wealth</em>, <em>70</em>, 551–580. DOI: <a href="https://doi.org/10.1111/roiw.12657">10.1111/roiw.12657</a>
+</div>
+<div id="ref-disslbacher_top_2020" class="csl-entry" role="listitem">
+Disslbacher, Franziska/Ertl, Michael/List, Emanuel/Mokre, Patrick/Schnetzer, Matthias (2020). <em>On top of the top: <span>Adjusting</span> wealth distributions using national rich lists</em> (No. 20). WU Vienna University of Economics; Business.
+</div>
+<div id="ref-elinder_inheritance_2018" class="csl-entry" role="listitem">
+Elinder, Mikael/Erixson, Oscar/Waldenström, Daniel (2018). Inheritance and Wealth Inequality: <span>Evidence</span> from Population Registers. <em>Journal of Public Economics</em>, <em>165</em>, 17–30. DOI: <a href="https://doi.org/10.1016/j.jpubeco.2018.06.012">10.1016/j.jpubeco.2018.06.012</a>
+</div>
+<div id="ref-eurofound_wealth_2021" class="csl-entry" role="listitem">
+Eurofound (2021). <em>Wealth distribution and social mobility</em>. Luxembourg: Publications Office of the European Union.
+</div>
+<div id="ref-european_commission_wealth_2026" class="csl-entry" role="listitem">
+European Commission (2026). <em>Wealth taxation, including net wealth, capital and exit taxes: <span>Volume 1</span></em>. Luxembourg: Publications Office of the European Union.
+</div>
+<div id="ref-fessler_private_2018" class="csl-entry" role="listitem">
+Fessler, Pirmin/Schürz, Martin (2018). Private Wealth Across <span>European</span> Countries: <span>The</span> Role of Income, Inheritance and the Welfare State. <em>Journal of Human Development and Capabilities</em>, <em>19</em>(4), 521–549. DOI: <a href="https://doi.org/10.1080/19452829.2018.1507422">10.1080/19452829.2018.1507422</a>
+</div>
+<div id="ref-grunberger_inheritances_2024" class="csl-entry" role="listitem">
+Grünberger, Klaus/Derndorfer, Judith/Schnetzer, Matthias (2024). <em>Inheritances in <span>Austria</span>: <span>A</span> model estimation of intergenerational wealth transfers up to 2050</em> (No. 4/2024). Seville: European Commission, Joint Research Centre.
+</div>
+<div id="ref-hfcn_household_2020" class="csl-entry" role="listitem">
+Household Finance and Consumption Network (2020). <em><a href="https://doi.org/10.2866/776370">The household finance and consumption survey: <span>Results</span> from the 2017 wave</a></em>. European Central Bank.
+</div>
+<div id="ref-krenek_intaxmod_2022" class="csl-entry" role="listitem">
+Krenek, Alexander/Schratzenstaller, Margit/Grünberger, Klaus/Thiemann, Andreas (2022). <em><span>INTAXMOD</span>: <span>Inheritance</span> and gift taxation in the context of ageing</em> (No. 04/2022). Brussels: European Commission, Joint Research Centre.
+</div>
+<div id="ref-morelli_influence_2025" class="csl-entry" role="listitem">
+Morelli, Salvatore/Nolan, Brian/Palomino, Juan C./Van Kerm, Philippe (2025). The Influence of Inheritances on Wealth Inequality in Rich Countries. <em>Journal of Public Economics</em>, <em>247</em>. DOI: <a href="https://doi.org/10.31235/osf.io/j76ds">10.31235/osf.io/j76ds</a>
+</div>
+<div id="ref-oecd_inheritance_2021" class="csl-entry" role="listitem">
+OECD (2021). <em>Inheritance taxation in <span>OECD</span> countries</em>. Paris: OECD Publishing. DOI: <a href="https://doi.org/10.1787/e2879a7d-en">10.1787/e2879a7d-en</a>
+</div>
+<div id="ref-palomino_wealth_2022" class="csl-entry" role="listitem">
+Palomino, Juan C./Marrero, Gustavo A./Nolan, Brian/Rodríguez, Juan G. (2022). Wealth Inequality, Intergenerational Transfers, and Family Background. <em>Oxford Economic Papers</em>, <em>74</em>(3), 643–670. DOI: <a href="https://doi.org/10.1093/oep/gpab052">10.1093/oep/gpab052</a>
+</div>
+<div id="ref-piketty_long-run_2011" class="csl-entry" role="listitem">
+Piketty, Thomas (2011). On the Long-Run Evolution of Inheritance: <span>France</span> 1820–2050. <em>The Quarterly Journal of Economics</em>, <em>126</em>(3), 1071–1131. DOI: <a href="https://doi.org/10.1093/qje/qjr020">10.1093/qje/qjr020</a>
+</div>
+<div id="ref-piketty_theory_2013" class="csl-entry" role="listitem">
+Piketty, Thomas/Saez, Emmanuel (2013). A Theory of Optimal Inheritance Taxation. <em>Econometrica</em>, <em>81</em>(5), 1851–1886. DOI: <a href="https://doi.org/10.3982/ECTA10712">10.3982/ECTA10712</a>
+</div>
+<div id="ref-piketty_rethinking_2023" class="csl-entry" role="listitem">
+Piketty, Thomas/Saez, Emmanuel/Zucman, Gabriel (2023). Rethinking Capital and Wealth Taxation. <em>Oxford Review of Economic Policy</em>, <em>39</em>(3), 575–591. DOI: <a href="https://doi.org/10.1093/oxrep/grad031">10.1093/oxrep/grad031</a>
+</div>
+<div id="ref-piketty_wealth_2015" class="csl-entry" role="listitem">
+Piketty, Thomas/Zucman, Gabriel (2015). Wealth and Inheritance in the Long Run. In <em>Handbook of income distribution</em>. Elsevier. DOI: <a href="https://doi.org/10.1016/B978-0-444-59429-7.00016-9">10.1016/B978-0-444-59429-7.00016-9</a>
+</div>
+<div id="ref-scheuer_taxation_2020" class="csl-entry" role="listitem">
+Scheuer, Florian/Slemrod, Joel (2020). Taxation and the Superrich. <em>Annual Review of Economics</em>, <em>12</em>(1), 189–211. DOI: <a href="https://doi.org/10.1146/annurev-economics-081919-050forfait">10.1146/annurev-economics-081919-050forfait</a>
+</div>
+<div id="ref-schratzenstaller_behavioral_2025" class="csl-entry" role="listitem">
+Schratzenstaller, Margit (2025). Behavioral Responses to Inheritance Taxation: <span>A</span> Review of the Empirical Literature. <em>Economic Analysis and Policy</em>, <em>85</em>, 238–260. DOI: <a href="https://doi.org/10.1016/j.eap.2024.11.026">10.1016/j.eap.2024.11.026</a>
+</div>
+<div id="ref-vermeulen_how_2018" class="csl-entry" role="listitem">
+Vermeulen, Philip (2018). How Fat Is the Top Tail of the Wealth Distribution? <em>Review of Income and Wealth</em>, <em>64</em>, 357–387. DOI: <a href="https://doi.org/10.1111/roiw.12279">10.1111/roiw.12279</a>
+</div>
+<div id="ref-zeman_cohort_2017" class="csl-entry" role="listitem">
+Zeman, Kryštof/Brzozowska, Zuzanna/Sobotka, Tomáš/Beaujouan, Éva/Matysiak, Anna (2017). Cohort Fertility and Education Database: <span>Methods</span> Protocol. <a href="https://www.cfe-database.org">www.cfe-database.org</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br>
+</p>
+</section>
+</section>
+<section id="info" class="level1">
+<h1></h1>
+<p>This document was created with <a href="https://quarto.org" target="_blank">Quarto</a>, <a href="https://closeread.netlify.app" target="_blank">closeread</a> and <a href="https://www.r-project.org" target="_blank">R</a>.</p>
+<p><br>
+</p>
+<p>The webpage is based on an article written by Hugo Cruces, Judith Derndorfer, Klaus Grünberger and Matthias Schnetzer that has been published in <a href="https://doi.org/xxx" target="_blank">XXX</a>.</p>
+<p><br>
+</p>
+<p><i class="fa-solid fa-envelope" aria-label="envelope"></i> <a href="mailto:matthias.schnetzer%20(at)%20akwien.at" target="_blank">matthias.schnetzer@akwien.at</a>   <i class="fa-solid fa-globe" aria-label="globe"></i> <a href="https://mschnetzer.github.io/" target="_blank">mschnetzer.github.io</a>   <i class="fa-brands fa-bluesky" aria-label="bluesky"></i> <a href="https://bsky.app/profile/matschnetzer.bsky.social" target="_blank">matschnetzer</a></p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
